@@ -3,7 +3,7 @@
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
 <head>
-	<title>Rezepte &raquo; Startseite</title>
+	<title>Rezepte &raquo; Registrierung</title>
 
 	<!-- base url for all relative paths. change to whatever suits your system -->
 	<base href="http://localhost/bfd_rezepte/" />
@@ -23,12 +23,12 @@
 	</div>
 	
 	<ul id="navi" class="menubar">
-		<li class="level1 level1_active"><a href="index.html" title="Zur Startseite" accesskey="s">Startseite</a></li>
+		<li class="level1"><a href="index.html" title="Zur Startseite" accesskey="s">Startseite</a></li>
 		<li class="level1"><a href="accesskeys.html" title="Zur Hilfe bezüglich Accesskeys" accesskey="h">Accesskeys</a></li>
-		<li class="level1"><a href="javascript:return false;" title="Login und Registrierung ausklappen" accesskey="v">Verwaltung</a>
+		<li class="level1 level1_active"><a href="javascript:return false;" title="Login und Registrierung ausklappen" accesskey="v">Verwaltung</a>
 			<ul class="submenu">
 				<li class="level2"><a href="login.html" title="Zum Login" accesskey="l">Login</a></li>
-				<li class="level2"><a href="register.html" title="Zur Registrierung" accesskey="r">Registrierung</a></li>
+				<li class="level2 level2_active"><a href="register.html" title="Zur Registrierung" accesskey="r">Registrierung</a></li>
 			</ul>
 		</li>
 		<li class="level1"><a href="javascript:return false;" title="Rezeptkategorien ausklappen" accesskey="k">Kategorien</a>
@@ -41,9 +41,39 @@
 	</ul>
 	
 	<div id="content">
-		<h2>Willkommen auf der Rezepteseite</h2>
+		<h2>Benutzer-Registrierung</h2>
 		
-		<p>Lorem ipsum</p>
+		<p>
+			Bitte geben Sie Ihre persönlichen Daten zur Registrierung ein.
+		</p>
+		
+		<form name="registerForm" action="?" method="post">
+
+		<fieldset id="registerFieldset">
+			<legend>Ihre Persönlichen Daten</legend>
+
+			<label for="username">Benutzername:</label>
+			<input id="username" type="text" name="loginUserName" />
+			
+			<label for="password">Passwort:</label>
+			<input id="password" type="password" name="loginPassword" />
+			
+			<label for="password2">Passwort (Bestätigung):</label>
+			<input id="password2" type="password" name="loginPassword2" />
+			
+			<label for="firstname">Vorname:</label>
+			<input id="firstname" type="text" name="firstname" />
+
+			<label for="lastname">Nachname:</label>
+			<input id="lastname" type="text" name="lastname" />
+			
+			<label for="email">E-Mail Adresse:</label>
+			<input id="email" type="text" name="email" />
+			
+			<input id="submit" type="submit" name="submitRegister" value="Registrieren" />
+		</fieldset>
+
+		</form>
 	</div>
 </body>
 </html>

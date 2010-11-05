@@ -24,7 +24,7 @@ div#header {
 }
 
 ul#navi {
-	width:13%;
+	width:18%;
 	height:86%;
 	padding-top:2%;
 	float:left;
@@ -52,6 +52,10 @@ ul#navi {
 	display:none;
 }
 
+#navi li.level1_active ul.submenu {
+	display:block;
+}
+
 #navi ul.submenu li.level2 {
 	margin-bottom:5%;
 }
@@ -74,13 +78,43 @@ ul#navi {
 
 
 div#content {
-	width:80%;
+	width:75%;
 	height:80%;
 	padding:2%;
 	float:right;
 }
 
+p {
+	margin-bottom:1em;
+}
+
 h2 {
 	border-bottom:2px dashed #a0a0a0;
 	margin-bottom:1em;
+}
+
+fieldset {
+	width:60%;
+	margin:0 auto;
+	padding:2% 5%;
+}
+
+fieldset label {
+	float:left;
+	clear:both;
+	margin-bottom:1em;
+	width:30%;
+}
+
+fieldset input {
+	float:right;
+	width:45%;
+	margin-right:20%;
+}
+
+fieldset input[type="submit"] {
+	width:auto;
+	clear:both;
+	float:left;
+	margin-left:34%;
 }
