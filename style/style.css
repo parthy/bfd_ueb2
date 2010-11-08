@@ -25,10 +25,11 @@ div#header {
 
 ul#navi {
 	width:98%;
-	min-height:5%;
+	height:5%;
 	background-color:#e5e5e5;
 	padding-left:2%;
 	list-style-type:none;
+	position:absolute;
 }
 
 #navi li.level1 {
@@ -77,9 +78,10 @@ ul#subnavi {
 	padding:2%;
 	float:left;
 	height:75%;
+	margin-top:2em;
 	background-color:#f6f6f6;
 	list-style-type:none;
-	position:absolute;
+	z-index:1;
 }
 
 div#content {
@@ -87,8 +89,8 @@ div#content {
 	height:75%;
 	padding:2%;
 	margin-left:20%;
-	position:absolute;
-	z-index:-5;
+	margin-top:2em;
+	z-index:1;
 }
 
 p {
