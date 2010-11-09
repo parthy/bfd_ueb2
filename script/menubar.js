@@ -162,7 +162,7 @@ $(document).ready(function(event) {
                 });
 
                 // set focus on the first submenu item
-                $(this).find('li:first').focus();
+                $(this).find('li:first').children()[0].focus();
 
                 break;
             }
@@ -182,7 +182,7 @@ $(document).ready(function(event) {
                 } // endif
 
                 // Set focus to new menu
-                selectedMenu.focus();
+                selectedMenu.children()[0].focus();
 
                 // Remove the highlight from the current menu
                 removeHighlight(this);
@@ -199,7 +199,7 @@ $(document).ready(function(event) {
                 } // endif
 
                 // Set focus to new menu
-                selectedMenu.focus();
+                selectedMenu.children()[0].focus();
 				
                 // Remove the highlight from the current menu
                 removeHighlight(this);
@@ -301,7 +301,7 @@ $(document).ready(function(event) {
                 break;
             }
             case KEY_ESC: {
-                $(this).parent().parent().focus();
+                $(this).parent().parent().children()[0].focus();
                 $(this).parent().hide();
 
                 return true;
@@ -317,11 +317,11 @@ $(document).ready(function(event) {
             }
             case KEY_UP: {
                 // select the previous menu item
-                selectedItem = $(this).prev();
+                selectedItem = $(this).prev().children()[0];
 
                 // if there is no previous menu item, select the last one
                 if( !$(selectedItem).length ) {
-                    selectedItem = $(this).parent().children('li:last');
+                    selectedItem = $(this).parent().children('li:last').children()[0];
                 } // endif
 
                 if ($(selectedItem).attr('role') == 'separator') {
@@ -340,11 +340,11 @@ $(document).ready(function(event) {
             }
             case KEY_DOWN: {
                 // select the next menu item
-                selectedItem = $(this).next();
+                selectedItem = $(this).next().children()[0];
 
                 // if there is no next menu item, select the first one
                 if( !$(selectedItem).length ) {
-                    selectedItem = $(this).parent().children('li:first');
+                    selectedItem = $(this).parent().children('li:first').children()[0];
                 } // endif
 
                 if ($(selectedItem).attr('role') == 'separator') {
@@ -373,7 +373,7 @@ $(document).ready(function(event) {
 
                 // Show the new menu and select the first item
                 selectedItem.children('ul').show();
-                selectedItem.find('li:first').focus();
+                selectedItem.find('li:first').children()[0].focus();
 
                 // Hide the current menu and remove the highlights
                 $(this).parent().hide();
@@ -393,7 +393,7 @@ $(document).ready(function(event) {
                 } // endif
 
                 selectedItem.children('ul').show();
-                selectedItem.find('li:first').focus();
+                selectedItem.find('li:first').children()[0].focus();
 
                 // Hide the current menu and remove the highlights
                 $(this).parent().hide();
