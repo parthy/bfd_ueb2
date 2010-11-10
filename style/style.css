@@ -37,11 +37,18 @@ div#header {
 ul#navi {
 	margin:0 0 0 1em;
 	width:90%;
-	height:2em;
 	/*height:5%;
 	background-color:#7d5024;*/
 	list-style-type:none;
-	position:absolute;
+	/*position:absolute;*/
+}
+
+#navi li a {
+	display:block;
+	width:100%;
+	height:100%;
+	text-decoration:none;
+	color:#7d5024;
 }
 
 #navi li.level1 {
@@ -49,7 +56,7 @@ ul#navi {
 	padding:0.5em 2em;
 	margin-right:1em;
 	background-color:#f4e9d8;
-	border:0.1em solid #7d5024;
+	/*border:0.1em solid #7d5024;*/
 	color:#7d5024;
 	border-radius:1em 1em 0em 0em;
 	-moz-border-radius:1em 1em 0em 0em;
@@ -65,38 +72,37 @@ ul#navi {
 }
 
 #navi ul.submenu {
-	margin-top:6%;
 	list-style-type:none;
-	padding-left:10%;
+	padding:0.6% 3%;
 	display:none;
 	z-index:5;
 	border-radius:1em;
 	-moz-border-radius:1em;
+	position:absolute;
+	background-color:#7d5024;
 }
 
 #navi ul.submenu li.level2 {
 	margin-bottom:5%;
+	z-index:10;
+}
+
+#navi ul.submenu li.level2 a {
 	color:#f4e9d8;
 }
 
 #navi ul.submenu li.level2:hover, #navi ul.submenu li.level2_active {
-}
-
-#navi li a {
-	display:block;
-	width:100%;
-	height:100%;
-	text-decoration:none;
-	color:#7d5024;
+	z-index:10;
 }
 
 #navi ul.submenu li.level2:hover a, #navi ul.submenu li.level2_active a {
 	font-weight:bold;
 	color:#f4e9d8;
+	z-index:10;
 }
 
 ul#subnavi {
-	width:13%;
+	width:15%;
 	padding:2%;
 	float:left;
 	height:75%;
@@ -113,7 +119,7 @@ ul#breadcrumbs {
 	padding:0.3em 1em 0.3em 2em;
 	color:#ffffff;
 	clear:both;
-	margin-top:2.4em;
+	/*margin-top:2.4em;*/
 }
 
 ul#breadcrumbs li {
