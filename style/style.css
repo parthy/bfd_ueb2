@@ -17,6 +17,8 @@ div#page {
 	-moz-border-radius:1.5em;
 }
 
+/* Kopfbereich */
+
 div#header {
 	width:100%;
 	background-color:#ffffff;
@@ -33,6 +35,8 @@ div#header {
 	font-style:italic;
 	color:#7d5024;
 }
+
+/* Menüleiste */
 
 ul#navi {
 	margin:0 0 0 1em;
@@ -101,6 +105,8 @@ ul#navi {
 	z-index:10;
 }
 
+/* vertikales Submenü */
+
 ul#subnavi {
 	width:15%;
 	padding:2%;
@@ -111,6 +117,8 @@ ul#subnavi {
 	list-style-type:none;
 	z-index:1;
 }
+
+/* Breadcrumbs-Navigation */
 
 ul#breadcrumbs {
 	list-style-type:none;
@@ -169,6 +177,8 @@ ul#breadcrumbs li.current a:hover {
 	text-decoration:underline;
 }
 
+/* Content-Bereich */
+
 div#content {
 	width:75%;
 	height:75%;
@@ -177,6 +187,8 @@ div#content {
 	margin-top:2em;
 	z-index:1;
 }
+
+/* Standard-Formatierungen */
 
 p {
 	margin-bottom:1em;
@@ -227,4 +239,11 @@ table td {
 
 table#zutatenliste {
 	float:right;
+}
+
+/* Formatierung für Offscreen-Inhalt */
+
+.offscreen {
+	position:absolute;
+	margin-left:-999em;
 }
