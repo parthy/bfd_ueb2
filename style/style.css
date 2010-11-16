@@ -56,7 +56,7 @@ ul#navi {
 }
 
 #navi li.level1 {
-	width:15%;
+	width:12%;
 	padding:0.5em 2em;
 	margin-right:1em;
 	background-color:#f4e9d8;
@@ -80,10 +80,13 @@ ul#navi {
 	padding:0.6% 3%;
 	display:none;
 	z-index:5;
-	border-radius:1em;
-	-moz-border-radius:1em;
+	border-radius:0em 0em 1em 1em;
+	-moz-border-radius:0em 0em 1em 1em;
 	position:absolute;
 	background-color:#7d5024;
+	margin-left:-2em;
+	margin-top:0.5em;
+	padding-top:1em;
 }
 
 #navi ul.submenu li.level2 {
@@ -108,14 +111,35 @@ ul#navi {
 /* vertikales Submenü */
 
 ul#subnavi {
-	width:15%;
+	width:20%;
 	padding:2%;
 	float:left;
 	height:75%;
-	margin-top:2em;
-	background-color:#f6f6f6;
+	margin-top:0em;
+	background-color:#EFE9E0;
 	list-style-type:none;
 	z-index:1;
+	border-radius:0em 0em 1em 0em;
+	-moz-border-radius:0em 0em 1em 0em;
+}
+
+ul#subnavi li {
+	margin-bottom:1em;
+}
+
+ul#subnavi a:link {
+	color:#7d5024;
+	text-decoration:underline;
+}
+
+ul#subnavi a:visited {
+	color:#000000;
+	text-decoration:underline;
+}
+
+ul#subnavi a:hover {
+	text-decoration:none;
+	color:#7d5024;
 }
 
 /* Breadcrumbs-Navigation */
@@ -183,7 +207,7 @@ div#content {
 	width:75%;
 	height:75%;
 	padding:2%;
-	margin-left:20%;
+	margin-left:25%;
 	margin-top:2em;
 	z-index:1;
 }
@@ -191,18 +215,24 @@ div#content {
 /* Standard-Formatierungen */
 
 p {
-	margin-bottom:1em;
+	margin-bottom:2em;
+	margin-right:4em;
+	margin-left:2em;
+	line-height:150%;
 }
 
 h2 {
-	border-bottom:2px dashed #a0a0a0;
+	/*border-bottom:2px dashed #a0a0a0;*/
+	color:#7d5024;
+	font-size:1.7em;
 	margin-bottom:1em;
 }
 
 fieldset {
-	width:60%;
-	margin:0 auto;
-	padding:2% 5%;
+	padding:1.5em;
+	margin-bottom:2em;
+	margin-right:4em;
+	margin-left:2em;
 }
 
 fieldset label {
@@ -215,26 +245,45 @@ fieldset label {
 fieldset input {
 	float:right;
 	width:45%;
-	margin-right:20%;
+	/*margin-right:4em;*/
+	border:0.1em solid #000000;
 }
 
 fieldset input[type="submit"] {
 	width:auto;
 	clear:both;
-	float:left;
-	margin-left:34%;
+	/*float:left;*/
+	text-align:center;
+	margin-top:1em;
+	padding:0.3em 0.5em;
 }
 
 table {
+	margin-bottom:2em;
+	margin-right:4em;
 	margin-left:2em;
+	border:0.1em solid #000000;
 }
 
 table caption {
-	margin-bottom:0.5em;
+	text-align:left;
+	color:#7d5024;
+	margin:0em;
+	margin-bottom:1em;
+	font-style:italic;
+	font-weight:bold;
 }
 
 table td {
-	padding:0.2em;
+	padding:0.3em 0.5em;
+}
+
+table th {
+	padding:0.5em;
+	font-weight:bold;
+	text-align:left;
+	background-color:#7d5024;
+	color:#ffffff;
 }
 
 table#zutatenliste {
