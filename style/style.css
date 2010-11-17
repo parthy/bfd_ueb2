@@ -290,6 +290,23 @@ table#zutatenliste {
 	float:right;
 }
 
+div.image {
+	margin:2em 8em 2em 2em;
+	text-align:center;
+}
+
+div.image img {
+	border:0.1em solid #7d5024;
+}
+
+div.image p {
+	font-style:italic;
+	text-align:center;
+	margin:0;
+	margin-top:0.5em;
+	font-size:0.8em;
+}
+
 /* Formatierung für Offscreen-Inhalt */
 
 .offscreen {
