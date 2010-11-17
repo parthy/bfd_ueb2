@@ -216,7 +216,7 @@ div#content {
 
 p {
 	margin-bottom:2em;
-	margin-right:4em;
+	margin-right:8em;
 	margin-left:2em;
 	line-height:150%;
 }
@@ -231,7 +231,7 @@ h2 {
 fieldset {
 	padding:1.5em;
 	margin-bottom:2em;
-	margin-right:4em;
+	margin-right:8em;
 	margin-left:2em;
 }
 
@@ -260,7 +260,7 @@ fieldset input[type="submit"] {
 
 table {
 	margin-bottom:2em;
-	margin-right:4em;
+	margin-right:8em;
 	margin-left:2em;
 	border:0.1em solid #000000;
 }

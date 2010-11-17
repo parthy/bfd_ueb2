@@ -23,12 +23,12 @@
                 <h1>Rezept-Sammlung</h1>
         </div>
         <a name="navigation"></a>
-        <ul id="navi" class="menubar" role="navigation">
+        <ul id="navi" class="menubar" role="navigation" title="Hauptnavigation">
                 <li class="level1"><a href="index.html" title="Zur Startseite" accesskey="s">Startseite</a></li>
-                <li class="level1"><a href="accesskeys.html" title="Zur Hilfe bez&uuml;glich Accesskeys" accesskey="h">Accesskeys</a></li>
+                <li class="level1"><a href="accesskeys.html" title="Zur Hilfe zu Tastaturk&uuml;rzeln" accesskey="h"><span  lang="en" xml:lang="en">Accesskeys</span></a></li>
                 <li class="level1 level1_active"><a href="#" title="Login und Registrierung ausklappen" accesskey="v">Verwaltung</a>
                         <ul class="submenu">
-                                <li class="level2 level2_active"><a href="login.html" title="Zum Login" accesskey="l">Login</a></li>
+                                <li class="level2"><a href="login.html" title="Zur Anmeldung" accesskey="l"><span lang="en" xml:lang="en">Login</span></a></li>
                                 <li class="level2"><a href="register.html" title="Zur Registrierung" accesskey="r">Registrierung</a></li>
                         </ul>
                 </li>
@@ -40,24 +40,24 @@
                 </li>
 
         </ul>
-        <ul id="breadcrumbs" role="navigation">
+        <ul id="breadcrumbs" role="navigation" title="Sie sind hier:">
         	<li><a href="index.html" title="Zur Startseite">Startseite</a></li>
-            <li class="current"><a href="login.html" title="Zum Login">Login</a></li>
+            <li class="current"><a href="login.html" title="Zur Anmeldung"><span lang="en" xml:lang="en">Login</span></a></li>
         </ul>
 
         <a name="content"></a>
-        <div id="content" role="main">
-                <h2>Login</h2>
+        <div id="content" role="main" title="Inhaltsbereich">
+                <h2 lang="en" xml:lang="en">Login</h2>
                 <form name="loginForm" action="?" method="post">
 
                 <fieldset id="loginFieldset">
-                        <legend>Ihre Login-Daten</legend>
+                        <legend>Ihre <span lang="en" xml:lang="en">Login</span>-Daten</legend>
 
                         <label for="username">Benutzername:</label>
-                        <input id="username" type="text" name="loginUserName" />
+                        <input id="username" type="text" name="loginUserName" aria-required="true" aria-label="Benutzername" />
 
                         <label for="password">Passwort:</label>
-                        <input id="password" type="password" name="loginPassword" />
+                        <input id="password" type="password" name="loginPassword" aria-required="true" aria-label="Passwort" />
 
                         <input type="submit" name="submitLogin" value="Einloggen" />
                 </fieldset>
