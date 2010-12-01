@@ -11,14 +11,19 @@
 
 package mci_tlx;
 
+import java.awt.Container;
+import javax.swing.JPanel;
+
 /**
  *
  * @author parthy
  */
 public class JPanelNameInput extends javax.swing.JPanel {
+    MainWindow parent;
 
     /** Creates new form JPanelNameInput */
-    public JPanelNameInput() {
+    public JPanelNameInput(MainWindow c) {
+	this.parent = c;
         initComponents();
     }
 
@@ -46,6 +51,11 @@ public class JPanelNameInput extends javax.swing.JPanel {
         });
 
         jButton1.setText("Befragung starten");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(this);
         this.setLayout(layout);
@@ -79,6 +89,18 @@ public class JPanelNameInput extends javax.swing.JPanel {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
 	// TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+	// TODO add your handling code here:
+	JPanel activePanel = new JPanelDemands(parent);
+	String person = jTextField1.getText();
+	TestResult res = new TestResult(person);
+	parent.setActivePerson(person);
+
+	parent.currentResult = res;
+	
+	parent.setNewContentPane(activePanel);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
