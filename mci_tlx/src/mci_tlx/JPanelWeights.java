@@ -11,14 +11,18 @@
 
 package mci_tlx;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author parthy
  */
 public class JPanelWeights extends javax.swing.JPanel {
+    private MainWindow parent;
 
     /** Creates new form JPanelWeights */
-    public JPanelWeights() {
+    public JPanelWeights(MainWindow parent) {
+	this.parent = parent;
         initComponents();
     }
 
@@ -415,13 +419,40 @@ public class JPanelWeights extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 	// TODO add your handling code here:
+	writeWeights();
+	
+	JPanel activePanel = new JPanelEval(parent);
+	parent.setNewContentPane(activePanel);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 	// TODO add your handling code here:
+	writeWeights();
+
+	JPanel activePanel = new JPanelNameInput(parent);
+	parent.setNewContentPane(activePanel);
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
+    private void writeWeights() {
+	parent.currentResult.addWeight(0, jSlider1.getValue());
+	parent.currentResult.addWeight(1, jSlider2.getValue());
+	parent.currentResult.addWeight(2, jSlider3.getValue());
+	parent.currentResult.addWeight(3, jSlider4.getValue());
+	parent.currentResult.addWeight(4, jSlider14.getValue());
+	parent.currentResult.addWeight(5, jSlider5.getValue());
+	parent.currentResult.addWeight(6, jSlider6.getValue());
+	parent.currentResult.addWeight(7, jSlider7.getValue());
+	parent.currentResult.addWeight(8, jSlider8.getValue());
+	parent.currentResult.addWeight(9, jSlider13.getValue());
+	parent.currentResult.addWeight(10, jSlider12.getValue());
+	parent.currentResult.addWeight(11, jSlider9.getValue());
+	parent.currentResult.addWeight(12, jSlider10.getValue());
+	parent.currentResult.addWeight(13, jSlider11.getValue());
+	parent.currentResult.addWeight(14, jSlider15.getValue());
+
+	parent.addCurrentResult();
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
