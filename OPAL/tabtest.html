@@ -11,16 +11,16 @@
 <body>
 
 <div class="login">
-    <h3 role="heading" lang="en" xml:lang="en" id="tabview-title">Login</h3>
-    <div id="login">
+    <h3 role="heading" lang="en" xml:lang="en">Login</h3>
+    <div id="login" role="application">
         <ul class="tabs" role="tablist">
-            <li class="selected" role="presentation"><a id="hochschul-tab" href="#hochschul-login" title="Hochschul-Login" role="tab" aria-controls="hochschul-login">Tab 1</a></li>
-            <li role="presentation"><a id="opal-tab" href="#opal-login" title="OPAL-Login" role="tab" aria-controls="opal-login">Tab 2</a></li>
+            <li id="hochschul-tab" aria-controls="hochschul-login" class="selected" role="tab" title="Hochschul-Login">Tab 1</li>
+            <li id="opal-tab" aria-controls="opal-login" role="tab" title="OPAL-Login">Tab 2</li>
         </ul>            
-        <div class="panels">
+        <div class="panels" aria-live="assertive"> 
             <div id="hochschul-login" role="tabpanel" aria-labelledby="hochschul-tab">
                 <p>Inhalt Tab 1</p>
-            </div> 
+            </div>
             <div id="opal-login" role="tabpanel" aria-labelledby="opal-tab">
                 <p>Inhalt Tab 2</p>
             </div> 
@@ -34,40 +34,55 @@
 		$('.jshidden').show();
 		
 		// Hinzufügen des Hilfetextes für den Screenreader
-		$('<p class="offscreen">Wenn ein Tab ausgewählt ist, können Sie die Pfeiltasten und Enter benutzen, um den Login zu wechseln.</p>').insertAfter('.yui-nav');
+		$('<p class="offscreen">Wenn ein Tab ausgewählt ist, können Sie die Pfeiltasten und Enter benutzen, um den Login zu wechseln.</p>').insertAfter('.tabs');
 		
 		// nur ausgewählter Tab in Taborder des Browsers, um schneller über Tab-Widget tabben zu können
-		$('.tabs a').attr('tabindex', '-1');
-		$('.tabs .selected a').attr('tabindex', '0');
+		$('.tabs li').attr('tabindex', '-1');
+		$('.tabs li.selected').attr('tabindex', '0');
 		
 		// Ausblenden der Tabpanels
-		//$('.yui-content div').hide();
-		//$('.panels div').addClass('offscreen');
+		$('.panels div').hide();
 		$('.panels div').attr('aria-hidden', 'true');
 		
 		//Einblenden des zum ausgewählten Tab gehörenden Panels
-		//$($('.tabs li.selected a').attr('href')).show();
-		//$($('.tabs li.selected a').attr('href')).removeClass('offscreen');
-		$($('.tabs li.selected a').attr('href')).attr('aria-hidden', 'false');
+		$('#'+$('.tabs li.selected').attr('aria-controls')).show();
+		$('#'+$('.tabs li.selected').attr('aria-controls')).attr('aria-hidden', 'false');
 		
 		// Tastatur-Navigation zwischen den Tab-Reitern				
-		$('.tabs a').keydown(function(event) {
+		$('.tabs li').keydown(function(event) {
 			switch(event.keyCode){
-				case 37	:	$(this).parent().prev().children('a').focus();
+				case 37	:	$(this).prev().focus();
 							break;
 							
-				case 39	:	$(this).parent().next().children('a').focus();
+				case 39	:	$(this).next().focus();
+							break;
+				
+				case 32 :	$(this).trigger('click');
+							break;
+							
+				case 13:	$(this).trigger('click');
 							break;
 			}
 		});
 		
-		$('.tabs a').click(function(){
-			//$('.yui-content div').addClass('offscreen');
-			//$($(this).attr('href')).removeClass('offscreen');
-			$('.panels div').attr('aria-hidden', 'true');
-			$($(this).attr('href')).attr('aria-hidden', 'false');
+		// Klick auf Tab		
+		$('.tabs li').click(function(){
+			// Hervorhebung des Tabs
 			$('.tabs li').removeClass('selected');
-			$(this).parent().addClass('selected');
+			$(this).addClass('selected');
+			
+			// Tabindex aktualisieren
+			$('.tabs li').attr('tabindex', '-1');
+			$(this).attr('tabindex', '0');
+			
+			// Panel anzeigen
+			$('.panels div').attr('aria-hidden', 'true');
+			$('#'+$(this).attr('aria-controls')).attr('aria-hidden', 'false');
+			$('.panels div').hide();
+			$('#'+$(this).attr('aria-controls')).show();
+			
+			// Vertauschen der Reihenfolge, damit der Screenreader auch liest
+			$($('.panels div').not($('#'+$(this).attr('aria-controls')))).before($('#'+$(this).attr('aria-controls')));
 		});
 				
 	// -->

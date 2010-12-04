@@ -41,16 +41,16 @@
     <div id="content" role="main">
     	<h2 role="heading">Willkommen bei <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></h2>
         <p><abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr> bietet Dozenten und Studenten viele Werkzeuge an, welche die Hochschulausbildung und -forschung bereichern und die alltägliche Arbeit erleichtern.</p>
-		<p>Sie werden sehen: Lehren und Lernen im Web macht Spaß und ist zudem einfacher, als Sie denken!</p>
-        <div class="yui-skin-sam login">
-        	<h3 role="heading" lang="en" xml:lang="en" id="tabview-title">Login</h3>
-            <div id="login" class="yui-navset">
-                <ul class="yui-nav" role="tablist">
-                    <li class="selected" role="presentation"><a href="#hochschul-login" title="" role="tab">Hochschul-Login</a></li>
-                    <li role="presentation"><a href="#opal-login" title="" role="tab">OPAL-Login</a></li>
+		<p>Sie werden sehen: Lehren und Lernen im Web macht Spaß und ist zudem einfacher, als Sie denken!</p>        
+        <div class="login">
+        	<h3 role="heading" lang="en" xml:lang="en">Login</h3>
+        	<div id="login" role="application">
+                <ul class="tabs" role="tablist">
+                    <li id="hochschul-tab" aria-controls="hochschul-login" class="selected" role="tab" title="Hochschul-Login">Hochschul-Login</li>
+                    <li id="opal-tab" aria-controls="opal-login" role="tab" title="OPAL-Login">OPAL-Login</li>
                 </ul>            
-                <div class="yui-content">
-                    <div id="hochschul-login" role="tabpanel" aria-labelledby="hochschul-login">
+                <div class="panels" aria-live="assertive"> 
+                    <div id="hochschul-login" role="tabpanel" aria-labelledby="hochschul-tab">
                         <h4>Hochschul-<span lang="en" xml:lang="en">Login</span></h4>
                         <p>Bitte melden Sie sich einfach mit dem gewohnten Login aus Ihrem Hochschul-Rechenzentrum an.</p>
                         <p>Eine spezielle Registrierung ist nicht erforderlich!</p>
@@ -85,8 +85,8 @@
                             <li><a href="#" title="">Sichere Verbindung fehlgeschlagen?</a></li>
                             <li><a href="#" title="">Passwort vergessen?</a></li>
                         </ul>
-                    </div> 
-                    <div id="opal-login" role="tabpanel" aria-labelledby="opal-login">
+                    </div>
+                    <div id="opal-login" role="tabpanel" aria-labelledby="opal-tab">
                         <h4><abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr>-<span lang="en" xml:lang="en">Login</span></h4>
                         <p>Bitte melden Sie sich mit Ihrem persönlichen <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr>-Benutzernamen und Passwort an.</p>
                         <form role="form" action="">
