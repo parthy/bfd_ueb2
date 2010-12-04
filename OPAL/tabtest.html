@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Unbenanntes Dokument</title>
+<link rel="stylesheet" type="text/css" href="opal.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div class="login">
+    <h3 role="heading" lang="en" xml:lang="en" id="tabview-title">Login</h3>
+    <div id="login">
+        <ul class="tabs" role="tablist">
+            <li class="selected" role="presentation"><a id="hochschul-tab" href="#hochschul-login" title="Hochschul-Login" role="tab" aria-controls="hochschul-login">Tab 1</a></li>
+            <li role="presentation"><a id="opal-tab" href="#opal-login" title="OPAL-Login" role="tab" aria-controls="opal-login">Tab 2</a></li>
+        </ul>            
+        <div class="panels">
+            <div id="hochschul-login" role="tabpanel" aria-labelledby="hochschul-tab">
+                <p>Inhalt Tab 1</p>
+            </div> 
+            <div id="opal-login" role="tabpanel" aria-labelledby="opal-tab">
+                <p>Inhalt Tab 2</p>
+            </div> 
+        </div>
+    </div>
+    <script type="text/javascript">
+    <!--
+	
+		// Einblenden von Elementen, die nur mit aktiviertem JavaScript sinnvoll und notwendig sind	
+		$('#login').show();
+		$('.jshidden').show();
+		
+		// Hinzufügen des Hilfetextes für den Screenreader
+		$('<p class="offscreen">Wenn ein Tab ausgewählt ist, können Sie die Pfeiltasten und Enter benutzen, um den Login zu wechseln.</p>').insertAfter('.yui-nav');
+		
+		// nur ausgewählter Tab in Taborder des Browsers, um schneller über Tab-Widget tabben zu können
+		$('.tabs a').attr('tabindex', '-1');
+		$('.tabs .selected a').attr('tabindex', '0');
+		
+		// Ausblenden der Tabpanels
+		//$('.yui-content div').hide();
+		//$('.panels div').addClass('offscreen');
+		$('.panels div').attr('aria-hidden', 'true');
+		
+		//Einblenden des zum ausgewählten Tab gehörenden Panels
+		//$($('.tabs li.selected a').attr('href')).show();
+		//$($('.tabs li.selected a').attr('href')).removeClass('offscreen');
+		$($('.tabs li.selected a').attr('href')).attr('aria-hidden', 'false');
+		
+		// Tastatur-Navigation zwischen den Tab-Reitern				
+		$('.tabs a').keydown(function(event) {
+			switch(event.keyCode){
+				case 37	:	$(this).parent().prev().children('a').focus();
+							break;
+							
+				case 39	:	$(this).parent().next().children('a').focus();
+							break;
+			}
+		});
+		
+		$('.tabs a').click(function(){
+			//$('.yui-content div').addClass('offscreen');
+			//$($(this).attr('href')).removeClass('offscreen');
+			$('.panels div').attr('aria-hidden', 'true');
+			$($(this).attr('href')).attr('aria-hidden', 'false');
+			$('.tabs li').removeClass('selected');
+			$(this).parent().addClass('selected');
+		});
+				
+	// -->
+    </script>
+</div>
+
+</body>
+</html>

@@ -1,95 +1,124 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="opal.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>OPAL - Online-Plattform für Akademisches Lehren und Lernen</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <!-- JavaScript Dependencies for Tabview: -->
+    <script src="http://yui.yahooapis.com/2.8.2r1/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+    <script src="http://yui.yahooapis.com/2.8.2r1/build/element/element-min.js"></script>
+    <!-- Source file for TabView -->
+    <script src="http://yui.yahooapis.com/2.8.2r1/build/tabview/tabview-min.js"></script>
+    <title>OPAL - Online-Plattform für Akademisches Lehren und Lernen - Login</title>
 </head>
 <body>
-	<div id="header">
+	<div id="header" role="banner">
     	<h1 class="offscreen">OPAL - Online-Plattform für Akademisches Lehren und Lernen</h1>
-        <a href="index.html" title="zur Startseite"><img src="img/OPAL-2-5.png" alt="Logo OPAL" /></a>
+        <p class="offscreen">Springe zu: <a href="#content" title="Springe direkt zum Hauptinhalt">Hauptinhalt</a> | <a href="#navigation" title="Springe direkt zur Navigation">Navigation</a></p>
+        <a href="index.html" title="zur Startseite" role="link"><img src="img/OPAL-2-5.png" alt="Logo OPAL" /></a>
+        <div class="language">
+        	<form  method="" name="languagechoose" action="">
+            	<label for="langchoose">Sprachauswahl:</label>
+                <select id="langchoose" name="langchoose">
+                	<option value="de" selected="selected"  class="german">Deutsch</option>
+                    <option value="en"  class="english">English</option>
+                </select>
+            </form>
+        </div>
     </div>
     <div id="sidebar">
-    	<ul>
-        	<li><a href="#" title="">OPAL</a></li>
-            <li><a href="#" title="">Barrierefreiheit</a></li>
-            <li><a href="#" title="">Über Cookies</a></li>
-            <li><a href="#" title="">Über OPAL</a></li>
+    	<a name="navigation"></a>
+    	<ul role="navigation">
+        	<li><a href="index.html" title="Startseite"><abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></a></li>
+            <li><a href="barrierefreiheit.html" title="Barrierefreiheit">Barrierefreiheit</a></li>
+            <li><a href="cookies.html" title="Über Cookies">Über <span lang="en" xml:lang="en">Cookies</span></a></li>
+            <li><a href="about.html" title="Allgemeine Informationen zu OPAL">Über <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></a></li>
         </ul>
     </div>
-    <div id="content">
-    	<h2>Willkommen bei <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></h2>
-        <p>OPAL bietet Dozenten und Studenten viele Werkzeuge an, welche die Hochschulausbildung und -forschung bereichern und die alltägliche Arbeit erleichtern.</p>
+    <a name="content"></a>
+    <div id="content" role="main">
+    	<h2 role="heading">Willkommen bei <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></h2>
+        <p><abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr> bietet Dozenten und Studenten viele Werkzeuge an, welche die Hochschulausbildung und -forschung bereichern und die alltägliche Arbeit erleichtern.</p>
 		<p>Sie werden sehen: Lehren und Lernen im Web macht Spaß und ist zudem einfacher, als Sie denken!</p>
-        <div class="login">
-        	<h3>Login</h3>
-            <div class="hochschule">
-            	<h4>Hochschul-Login</h4>
-            	<p>Bitte melden Sie sich einfach mit dem gewohnten Login aus Ihrem Hochschul-Rechenzentrum an.</p>
-                <p>Eine spezielle Registrierung ist nicht erforderlich!</p>
-            	<form>
-                	<fieldset>
-                    	<label for="hochschule">Meine Hochschule</label>
-                    	<select name="hochschule">
-                        	<option value="foo">Bitte wählen Sie Ihre Hochschule...</option>
-                            <option value="https://shib02.hmt-leipzig.de/shibboleth-idp" >HMT Leipzig</option>
-                            <option value="https://radius.hfmdd.de/shibboleth" >HS für Musik Dresden</option>
-                            <option value="https://login2.hs-mittweida.de/idp/shibboleth" >HS Mittweida</option>
-                            <option value="https://idp.hs-zigr.de/shibboleth" >HS Zittau / Görlitz</option>
-                            <option value="https://idp.htw-dresden.de/shibboleth" >HTW Dresden</option>
-                            <option value="https://idp.htwk-leipzig.de/shibboleth" >HTWK Leipzig</option>
-                            <option value="https://idp.hs-zigr.de/shibboleth-ihi" >IHI Zittau</option>
-                            <option value="https://www.dbod.de/idp/shibboleth" >SLUB Dresden</option>
-                            <option value="https://crux.hrz.tu-freiberg.de/shibboleth" >TU Bergakademie Freiberg</option>
-                            <option value="urn:mace:tu-chemnitz.de:wtc">TU Chemnitz</option>
-                            <option value="https://idp.tu-dresden.de/shibboleth" selected="selected">TU Dresden</option>
-                            <option value="https://shibb.rz.uni-leipzig.de/shibboleth" >Uni Leipzig</option>
-                            <option value="https://idp.fh-zwickau.de/shibboleth" >Westsächsische Hochschule Zwickau</option>
-                            <option value="https://www.bps-system.de/shibboleth-idp/" >VHO der BPS Bildungsportal Sachsen GmbH</option>
-                            <option value="https://vpn.bps-system.de/shibboleth-idp/" >Intern - BPS Bildungsportal Sachsen GmbH</option>
-                        </select>
-                        <input type="submit" name="btn_hochschullogin" value="Zum Hochschul-Login" />
-                    </fieldset>
-                </form>
-                <h5><abbr title="Häufig gestellte Fragen">FAQs</abbr> zum Login:</h5>
-                <ul>
-                	<li><a href="#" title="">Allgemeines zum Login</a></li>
-                    <li><a href="#" title="">Warum funktioniert mein Login nicht?</a></li>
-                    <li><a href="#" title="">Sichere Verbindung fehlgeschlagen?</a></li>
-                    <li><a href="#" title="">Passwort vergessen</a></li>
-                </ul>
+        <div class="yui-skin-sam login">
+        	<h3 role="heading" lang="en" xml:lang="en" id="tabview-title">Login</h3>
+            <div id="login" class="yui-navset">
+                <ul class="yui-nav" role="tablist">
+                    <li class="selected" role="presentation"><a href="#hochschul-login" title="" role="tab">Hochschul-Login</a></li>
+                    <li role="presentation"><a href="#opal-login" title="" role="tab">OPAL-Login</a></li>
+                </ul>            
+                <div class="yui-content">
+                    <div id="hochschul-login" role="tabpanel" aria-labelledby="hochschul-login">
+                        <h4>Hochschul-<span lang="en" xml:lang="en">Login</span></h4>
+                        <p>Bitte melden Sie sich einfach mit dem gewohnten Login aus Ihrem Hochschul-Rechenzentrum an.</p>
+                        <p>Eine spezielle Registrierung ist nicht erforderlich!</p>
+                        <form role="form" action="">
+                            <fieldset>
+                                <label for="hochschule">Meine Hochschule</label>
+                                <select name="hochschule" id="hochschule" role="combobox">
+                                    <option value="foo" selected="selected">Bitte wählen Sie Ihre Hochschule...</option>
+                                    <option value="https://shib02.hmt-leipzig.de/shibboleth-idp" >HMT Leipzig</option>
+                                    <option value="https://radius.hfmdd.de/shibboleth" >HS für Musik Dresden</option>
+                                    <option value="https://login2.hs-mittweida.de/idp/shibboleth" >HS Mittweida</option>
+                                    <option value="https://idp.hs-zigr.de/shibboleth" >HS Zittau / Görlitz</option>
+                                    <option value="https://idp.htw-dresden.de/shibboleth" >HTW Dresden</option>
+                                    <option value="https://idp.htwk-leipzig.de/shibboleth" >HTWK Leipzig</option>
+                                    <option value="https://idp.hs-zigr.de/shibboleth-ihi" >IHI Zittau</option>
+                                    <option value="https://www.dbod.de/idp/shibboleth" >SLUB Dresden</option>
+                                    <option value="https://crux.hrz.tu-freiberg.de/shibboleth" >TU Bergakademie Freiberg</option>
+                                    <option value="urn:mace:tu-chemnitz.de:wtc">TU Chemnitz</option>
+                                    <option value="https://idp.tu-dresden.de/shibboleth">TU Dresden</option>
+                                    <option value="https://shibb.rz.uni-leipzig.de/shibboleth" >Uni Leipzig</option>
+                                    <option value="https://idp.fh-zwickau.de/shibboleth" >Westsächsische Hochschule Zwickau</option>
+                                    <option value="https://www.bps-system.de/shibboleth-idp/" >VHO der BPS Bildungsportal Sachsen GmbH</option>
+                                    <option value="https://vpn.bps-system.de/shibboleth-idp/" >Intern - BPS Bildungsportal Sachsen GmbH</option>
+                                </select>
+                                <input type="submit" name="btn_hochschullogin" value="Zum Hochschul-Login" role="button" />
+                            </fieldset>
+                        </form>
+                        <h5><abbr title="Häufig gestellte Fragen">FAQs</abbr> zum <span lang="en" xml:lang="en">Login</span>:</h5>
+                        <ul>
+                            <li><a href="#" title="">Allgemeines zum Login</a></li>
+                            <li><a href="#" title="">Warum funktioniert mein Login nicht?</a></li>
+                            <li><a href="#" title="">Sichere Verbindung fehlgeschlagen?</a></li>
+                            <li><a href="#" title="">Passwort vergessen?</a></li>
+                        </ul>
+                    </div> 
+                    <div id="opal-login" role="tabpanel" aria-labelledby="opal-login">
+                        <h4><abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr>-<span lang="en" xml:lang="en">Login</span></h4>
+                        <p>Bitte melden Sie sich mit Ihrem persönlichen <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr>-Benutzernamen und Passwort an.</p>
+                        <form role="form" action="">
+                            <fieldset>
+                                <label for="username">Benutzername:</label>
+                                <input type="text" name="username" id="username" role="textbox" />
+                                <label for="password">Passwort:</label>
+                                <input type="password" id="password" name="password" role="textbox" />
+                                <input type="submit" name="btn_opallogin" value="Login" role="button" />
+                            </fieldset>
+                        </form>
+                        <ul>
+                            <li><a href="#" title="">Passwort vergessen?</a></li>
+                            <li><a href="#" title="">Gastzugang</a></li>
+                        </ul>
+                    </div> 
+                </div>
             </div>
-            <div class="opal">
-            	<h4>OPAL-Login</h4>
-            	<p>Bitte melden Sie sich mit Ihrem persönlichen OPAL-Benutzernamen und Passwort an.</p>
-                <form>
-                	<fieldset>
-                    	<label for="username">Benutzername:</label>
-                        <input type="text" name="username" />
-                        <label for="password">Passwort:</label>
-                        <input type="password" name="password" />
-                        <input type="submit" name="btn_opallogin" value="Login" />
-                    </fieldset>
-                </form>
-                <ul>
-                	<li><a href="#" title="">Passwort vergessen?</a></li>
-                    <li><a href="#" title="">Gastzugang</a></li>
-                </ul>
-            </div>
+			<script type="text/javascript" src="js/logintabs.js"></script>          
         </div>
         <div class="news">
-        	<h3>Aktuelles</h3>
-            <p>Viele Hinweise, Neuigkeiten und interessante Hintergrundinformationen zur Lernplattform OPAL finden Sie im <a href="#" title="">OPAL-Weblog</a>.</p>
+        	<h3 role="heading">Aktuelles</h3>
+            <p>Viele Hinweise, Neuigkeiten und interessante Hintergrundinformationen zur Lernplattform <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr> finden Sie im <a href="#" lang="en" xml:lang="en" title="Weblog">Weblog</a>.</p>
         </div>
     </div>
+    <div id="clearer"></div> <!-- sorgt dafür, dass Inhalt nicht hinter dem fixen Footer verborgen wird -->
     <div id="footer">
-    	<ul>
+    	<ul role="contentinfo">
         	<li><a href="#" title="">Nutzungsbedingungen</a></li>
             <li><a href="#" title="">Datenschutz</a></li>
             <li><a href="#" title="">Impressum</a></li>
-            <li><a href="#" title="">powered by BPS GmbH</a></li>
+            <li><a href="#" title=""><span lang="en" xml:lang="en">powered by</span> <abbr title="Bildungsportal Sachsen">BPS</abbr> <abbr title="Gesellschaft mit beschränkter Haftung">GmbH</abbr></a></li>
         </ul>
     </div>
 </body>
