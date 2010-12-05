@@ -59,18 +59,38 @@ class TestResult {
     }
 
     public int calculateTLX() {
-	return 0;
+	int tlx = 0;
+	
+	int weightMD = weights[0] + weights[1] + weights[2] + weights[3] + weights[4];
+	int weightPD = (weights[0]+1)%2 + weights[5] + weights[6] + weights[7] + weights[8];
+	int weightTD = (weights[1]+1)%2 + (weights[5]+1)%2 + (weights[9]+1)%2 + (weights[10]+1)%2 + (weights[11]+1)%2;
+	int weightOP = (weights[2]+1)%2 + (weights[6]+1)%2 + weights[9] + (weights[12]+1)%2 + (weights[13]+1)%2;
+	int weightEF = (weights[4]+1)%2 + (weights[8]+1)%2 + (weights[14]+1)%2 + weights[11] + weights[13];
+	int weightFR = (weights[3]+1)%2 + (weights[7]+1)%2 + weights[10] + weights[12] + weights[14];
+	
+	float rateMD = weightMD * demands.get("MD");
+	float ratePD = weightPD * demands.get("PD");
+	float rateTD = weightTD * demands.get("TD");
+	float rateOP = weightOP * demands.get("OP");
+	float rateEF = weightEF * demands.get("EF");
+	float rateFR = weightFR * demands.get("FR");
+	
+	tlx = Math.round((rateMD + ratePD + rateTD + rateOP + rateEF + rateFR)/15);
+	
+	return tlx;
     }
 
     public String toString() {
 	String ret = "";
 
 	ret += name + ": ";
-	ret += demands;
+	/*ret += demands;
 
 	for(int i=0; i<weights.length; i++) {
 	    ret += " ; " + weights[i];
-	}
+	}*/
+
+	ret += "TLX: " + calculateTLX();
 
 	return ret;
     }
