@@ -15,25 +15,34 @@ html {
 
 div#header {
 	display:block;
-	padding:0.75em 1% 0.5em 1%;
+	width:95%;
+	padding:1.25em 1% 0.5em 1%;
 	border-bottom:0.5em solid rgb(0, 82, 77);
 	box-shadow:0 0.5em 1.125em rgb(0, 82, 77);
 	-webkit-box-shadow:0 0.5em 1.125em rgb(0, 82, 77);
     -moz-box-shadow:0 0.5em 1.125em rgb(0, 82, 77);
+	margin:0 auto;
 }
 
 div#sidebar {
 	display:block;
 	float:left;
 	width:14.5%;
-	border-right:0.125em dotted rgb(221, 221, 221);
+	border-right:0.1em dotted rgb(221, 221, 221);
+	border-bottom:0.1em dotted rgb(221, 221, 221);
 	margin-top:1.5em;
+	margin-left:1%;
+	-moz-border-radius:0 0 0.5em 0;
+	-webkit-border-radius:0;
+	-webkit-border-bottom-right-radius:0.5em;
+	padding-bottom:0.5em;
 }
 
 div#content {
 	display:block;
 	padding:2em;
 	margin-left:14.6%;
+	margin-right:1%;
 }
 
 div#footer {
@@ -54,13 +63,28 @@ div#header a {
 }
 
 div.language {
-	margin-left:82%;
+	margin-left:83%;
 }
 
 div.language label {
 	width:auto;
 	margin-right:0.5em;
 	margin-top:0.5em;
+}
+
+div.language option {
+	background-repeat:no-repeat;
+	vertical-align:middle;
+	background-position:center right;
+	padding-right:1em;
+}
+
+option[value="en"] {
+	background-image:url(img/en.png);	
+}
+
+option[value="de"] {
+	background-image:url(img/de.png);	
 }
 
 /* Sidebar */
@@ -131,26 +155,13 @@ div#content a:hover, div#content a:focus {
 	color:rgb(185, 0, 0);
 }
 
-.tabs li {
-	display:inline-block;
-	cursor:pointer;
-	margin:0 0.5em 0 0;
-	vertical-align:bottom;
-	padding:0.25em 0;
-}
-
-.tabs li {
-	vertical-align:bottom;
-	padding:0.25em;
-}
-
 .tabs  {
 	margin:1.5em 0 0 0;
 	border-bottom:0.1em solid rgb(204, 204, 204);
 }
 
 .tabs li {
-	color:rgb(89, 89, 89);
+	color:rgb(0, 82, 77);
 	text-decoration:none;
 	border:0.1em solid rgb(204, 204, 204);
 	border-bottom-width:0;
@@ -160,15 +171,23 @@ div#content a:hover, div#content a:focus {
 	-webkit-border-top-left-radius:0.5em;
 	-webkit-border-top-right-radius:0.5em;
 	font-size:0.9em;
-}
-
-.tabs .selected, .tabs .selected:focus, .tabs .selected:hover {
 	background-color:rgb(232, 232, 232);
-	border-color:rgb(204, 204, 204);
+	display:inline-block;
+	cursor:pointer;
+	margin:0 0.5em 0 0;
+	vertical-align:bottom;
+	padding:0.25em 0.5em;
 }
 
-.tabs :focus {
-	color:rgb(0, 82, 77);
+ul.tabs li.selected, ul.tabs li.selected:focus, ul.tabs li.selected:hover {
+	background-color:rgb(255, 255, 255);
+	border-color:rgb(204, 204, 204);
+	font-weight:bold;
+	color:rgb(150, 0, 0);
+}
+
+ul.tabs li:focus, ul.tabs li:hover {
+	color:rgb(150, 0, 0);
 }
 
 fieldset {
@@ -204,6 +223,7 @@ input:hover, input:focus, select:hover, select:focus {
 }
 
 input[type="submit"] {
+	background-color:rgb(240, 240, 240);
 	border-radius:0.5em;
 	-moz-border-radius:0.5em;
 	-webkit-border-radius:0.5em;
@@ -214,7 +234,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover, input[type="submit"]:focus {
-	color:rgb(185, 0, 0);
+	color:rgb(150, 0, 0);
 }
 
 /* Footer */
@@ -267,4 +287,8 @@ div#footer a:hover, div#footer a:focus {
 
 a img {
 	border:none;
+}
+
+.jshidden {
+	display:none;
 }

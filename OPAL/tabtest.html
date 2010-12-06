@@ -57,10 +57,12 @@
 				case 39	:	$(this).next().focus();
 							break;
 				
-				case 32 :	$(this).trigger('click');
+				case 32 :	alert('Leertaste');
+							$(this).trigger('click');
 							break;
 							
-				case 13:	$(this).trigger('click');
+				case 13:	alert('Enter');
+							$(this).trigger('click');
 							break;
 			}
 		});
