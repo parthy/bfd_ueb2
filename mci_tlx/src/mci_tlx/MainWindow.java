@@ -14,6 +14,7 @@ package mci_tlx;
 import java.awt.Container;
 import java.util.ArrayList;
 import java.util.HashMap;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
@@ -32,6 +33,10 @@ public class MainWindow extends javax.swing.JFrame {
 
     public void addCurrentResult() {
 	results.put(activePerson, currentResult);
+    }
+
+    public HashMap<String, TestResult> getResults() {
+	return results;
     }
 
     /** Creates new form MainWindow */
@@ -66,6 +71,12 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         jButton2.setText("Auswertung anzeigen");
+        jButton2.setEnabled(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Bitte wählen Sie die gewünschte Aktion aus.");
 
@@ -111,14 +122,30 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 	// TODO add your handling code here:
+	results.clear();
+	this.activePerson = "";
+	
 	JPanel activePanel = new JPanelNameInput(this);
 	setNewContentPane(activePanel);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+	JPanel activePanel = new JPanelEval(this);
+	setNewContentPane(activePanel);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     public void setNewContentPane(Container c) {
 	this.setContentPane(c);
 
 	this.pack();
+    }
+
+    public JPanel getMainPanel() {
+	return jPanel1;
+    }
+
+    public JButton getEvalButton() {
+	return jButton2;
     }
 
     /**

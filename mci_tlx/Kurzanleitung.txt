@@ -1,0 +1,23 @@
+Kurzanleitung TLX Befragung
+
+1. Im Startbildschirm kann zwischen 2 Funktionen gewählt werden: 
+		- Eine Befragung starten
+		- Oder das Ergebnis der letzten Befragung anzeigen (Nur möglich, wenn vorhanden)
+		
+2. Bei einer neuen Befragung wird der Name des (ersten) Teilnehmers abgefragt.
+3. Danach muss er jeweils die folgenden Ansprüche quantifizieren:
+		- MD = Mental Demand, also geistige Anforderung
+		- PD = Physical Demand, also körperliche Anstrengung
+		- TD = Temporal Demand, also Geschwindigkeitsanspruch (Wie gestresst war der Proband)
+		- OP = Operational Performance, also Erfolgsgrad der Aufgabe
+		- EF = Effort, also "Wie hart mussten Sie arbeiten, um das zu erreichen"
+		- FR = Frustration, also Frustrationsgrad
+   Alle diese Anforderungen kann der Proband mittels Slidern stufenlos zwischen den angegeben Werten definieren.
+
+4. Nun werden mittels 2-stufiger Slider paarweise die Anforderungen verglichen,
+   welche stärker zur Schwierigkeit der Aufgabe beitrugen.
+   Wenn also beispielsweise die Anstrengung eher körperlich, als geistig war, wird der erste Slider zwischen MD und PD zu PD bewegt.
+   
+5. Sind für alle 15 Paare die Präferenzen eingestellt, hat man die Wahl, ob ein weiterer Proband befragt werden soll oder die Auswertung angezeigt.
+
+6. Die Auswertung gibt die einzelnen TLX-Werte aus, sowie den Durchschnitt. Danach kann man zum Startbildschirm zurückkehren oder das Programm beenden.
