@@ -22,6 +22,9 @@ div#header {
 	-webkit-box-shadow:0 0.5em 1.125em rgb(0, 82, 77);
     -moz-box-shadow:0 0.5em 1.125em rgb(0, 82, 77);
 	margin:0 auto;
+	background-image:url('img/geometry.gif');
+	background-repeat:no-repeat;
+	background-position:100px 0px;
 }
 
 div#sidebar {
@@ -29,7 +32,7 @@ div#sidebar {
 	float:left;
 	width:14.5%;
 	border-right:0.1em dotted rgb(221, 221, 221);
-	border-bottom:0.1em dotted rgb(221, 221, 221);
+	/*border-bottom:0.1em dotted rgb(221, 221, 221);*/
 	margin-top:1.5em;
 	margin-left:1%;
 	-moz-border-radius:0 0 0.5em 0;
@@ -108,6 +111,34 @@ div#header ul li a {
 
 div#sidebar ul {
 	margin:0.5em;
+	list-style-type:none;
+	background-color:#f0f0f0;
+}
+
+#sidebar ul li {
+	height:1.5em;
+	width:10.5em;
+	border-bottom:1px solid #a0a0a0;
+	margin-left:1em;
+	background-color:#fff;
+	padding-left:0.5em;
+}
+
+#sidebar ul li:hover {
+	background-color:#e5e5e5;
+}
+
+#sidebar ul li:first-child {
+	border-top:1px solid #a0a0a0;
+	margin-left:0;
+	width:11.5em;
+	background-color:#e5e5e5;
+}
+
+#sidebar ul li a {
+	color:rgb(45, 81, 161);
+	text-decoration:none;
+	line-height:1.5em;
 }
 
 /* Main */
@@ -180,6 +211,14 @@ div#content a:active {
 div#content a:hover, div#content a:focus {
 	text-decoration:none;
 	color:rgb(185, 0, 0);
+}
+
+div#hochschul-login h5 {
+	float:left;
+}
+div#hochschul-login ul {
+	list-style-type:square;
+	margin-left:10em;
 }
 
 .tabs  {

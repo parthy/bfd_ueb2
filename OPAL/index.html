@@ -17,7 +17,7 @@
     <div id="header" role="banner">
     	<h1 class="offscreen">OPAL - Online-Plattform für Akademisches Lehren und Lernen</h1>
         
-        <!-- Sprungmaken für Navigation und Hauptinhalt (Für Screenreader-Nutzer) -->        
+        <!-- Sprungmarken für Navigation und Hauptinhalt (Für Screenreader-Nutzer) -->        
         <p class="offscreen">Springe zu: <a href="#content" accesskey="s" title="Springe direkt zum Hauptinhalt" tabindex="1" role="link">Hauptinhalt</a> | <a href="#navigation" accesskey="m" title="Springe direkt zur Navigation" tabindex="2" role="link">Navigation</a> | <a href="#login" accesskey="l" title="Springe direkt zum Login" role="link" tabindex="3"><span lang="en" xml:lang="en">Login</span></a></p>
         <a href="index.html" title="zur Startseite" role="link" tabindex="3"><img src="img/OPAL-2-5.png" alt="Logo OPAL" /></a>
         
@@ -40,9 +40,9 @@
         <h2 class="offscreen">Navigation</h2>
     	<ul role="navigation">
         	<li role="presentation"><a href="index.html" title="Startseite" role="link" accesskey="1"><abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></a></li>
-            <li role="presentation"><a href="barrierefreiheit.html" title="Barrierefreiheit" role="link" accesskey="0">Barrierefreiheit</a></li>
-            <li role="presentation"><a href="cookies.html" title="Über Cookies" role="link">Über <span lang="en" xml:lang="en">Cookies</span></a></li>
-            <li role="presentation"><a href="about.html" title="Allgemeine Informationen zu OPAL" role="link">Über <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></a></li>
+            <li role="presentation"><a href="#" title="Barrierefreiheit" role="link" accesskey="0">Barrierefreiheit</a></li>
+            <li role="presentation"><a href="#" title="Über Cookies" role="link">Über <span lang="en" xml:lang="en">Cookies</span></a></li>
+            <li role="presentation"><a href="#" title="Allgemeine Informationen zu OPAL" role="link">Über <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></a></li>
         </ul>
     </div>
     
@@ -75,7 +75,7 @@
                         <form role="form" action="">
                             <fieldset>
                                 <label id="hochschul-label" for="hochschule">Meine Hochschule</label>
-                                <select name="hochschule" role="combobox" dojoType="dijit.form.FilteringSelect">
+                                <select name="hochschule" role="combobox" dojoType="dijit.form.FilteringSelect" id="select_hochschule">
                                     <option value="foo" selected="selected">Bitte wählen Sie Ihre Hochschule...</option>
                                     <option value="https://shib02.hmt-leipzig.de/shibboleth-idp" >HMT Leipzig</option>
                                     <option value="https://radius.hfmdd.de/shibboleth" >HS für Musik Dresden</option>
