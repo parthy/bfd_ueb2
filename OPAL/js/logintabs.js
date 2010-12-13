@@ -1,6 +1,11 @@
+// JavaScript Document
+
+// Sichern der Hochschul-Auswahlbox, da sie nach Umstellung auf ARIA-Widget und anschließendem Tabwechsel verloren geht
+var select = null;
+select = $('#hochschul-login select');
+
 // Einblenden von Elementen, die nur mit aktiviertem JavaScript sinnvoll und notwendig sind	
-$('#login').show();
-$('.jshidden').show();
+$('.jshidden').show(); 
 
 // Hinzufügen des Hilfetextes für den Screenreader
 $('<p class="offscreen">Wenn ein Tab ausgewählt ist, können Sie die Pfeiltasten und Enter oder Leertaste benutzen, um den Login zu wechseln.</p>').insertAfter('.tabs');
@@ -51,5 +56,11 @@ $('.tabs li').click(function(){
 	$('#'+$(this).attr('aria-controls')).show();
 	
 	// Vertauschen der Reihenfolge, damit der Screenreader auch liest
-	$($('.panels div').not($('#'+$(this).attr('aria-controls')))).before($('#'+$(this).attr('aria-controls')));
+	$($('.panels div.panel').not($('#'+$(this).attr('aria-controls')))).before($('#'+$(this).attr('aria-controls')));
+	
+	// wenn Hochschul-Login gewählt: Combobox wiederherstellen
+	if ($('.tabs li.selected').attr('id') == 'hochschul-tab'){
+		$('#hochschul-login .dijitComboBox').replaceWith(select); // ursprüngliche Select-Box einfügen
+		dojo.parser.parse(); // dojo-FilteringSelect neu parsen
+	}
 });

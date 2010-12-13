@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="claro.css" /> <!-- CSS für FilteringSelect-Widget aus dem dojo-Toolkit -->
     <link rel="stylesheet" type="text/css" href="opal.css" />
-    <!--<link rel="stylesheet" type="text/css" href="claro.css" />-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js" type="text/javascript" djConfig="parseOnLoad: true"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js" type="text/javascript" djConfig="parseOnLoad: true"></script> <!-- dojo-Toolkit -->
     <title>OPAL - Online-Plattform für Akademisches Lehren und Lernen - Login</title>
 </head>
-<body role="document" class="claro">
+<body role="document">
 	
     <!-- Kopfbereich -->
     
@@ -39,7 +39,7 @@
     	<a name="navigation"></a>
         <h2 class="offscreen">Navigation</h2>
     	<ul role="navigation">
-        	<li role="presentation"><a href="index.html" title="Startseite"><abbr title="Online-Plattform für Akademisches Lehren und Lernen" role="link" accesskey="1">OPAL</abbr></a></li>
+        	<li role="presentation"><a href="index.html" title="Startseite" role="link" accesskey="1"><abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></a></li>
             <li role="presentation"><a href="barrierefreiheit.html" title="Barrierefreiheit" role="link" accesskey="0">Barrierefreiheit</a></li>
             <li role="presentation"><a href="cookies.html" title="Über Cookies" role="link">Über <span lang="en" xml:lang="en">Cookies</span></a></li>
             <li role="presentation"><a href="about.html" title="Allgemeine Informationen zu OPAL" role="link">Über <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></a></li>
@@ -68,14 +68,14 @@
                 
                 <!-- Tabpanels -->         
                 <div class="panels" aria-live="assertive"> 
-                    <div id="hochschul-login" role="tabpanel" aria-labelledby="hochschul-tab" aria-relevant="all">
+                    <div id="hochschul-login" class="dijit_a11y panel" role="tabpanel" aria-labelledby="hochschul-tab" aria-relevant="all">
                         <h4 role="heading">Hochschul-<span lang="en" xml:lang="en">Login</span></h4>
                         <p>Bitte melden Sie sich einfach mit dem gewohnten Login aus Ihrem Hochschul-Rechenzentrum an.</p>
                         <p>Eine spezielle Registrierung ist nicht erforderlich!</p>
                         <form role="form" action="">
                             <fieldset>
-                                <label for="hochschule">Meine Hochschule</label>
-                                <select name="hochschule" id="hochschule" role="combobox" dojoType="dijit.form.ComboBox">
+                                <label id="hochschul-label" for="hochschule">Meine Hochschule</label>
+                                <select name="hochschule" role="combobox" dojoType="dijit.form.FilteringSelect">
                                     <option value="foo" selected="selected">Bitte wählen Sie Ihre Hochschule...</option>
                                     <option value="https://shib02.hmt-leipzig.de/shibboleth-idp" >HMT Leipzig</option>
                                     <option value="https://radius.hfmdd.de/shibboleth" >HS für Musik Dresden</option>
@@ -94,18 +94,17 @@
                                     <option value="https://vpn.bps-system.de/shibboleth-idp/" >Intern - BPS Bildungsportal Sachsen GmbH</option>
                                 </select>
                                 <input type="submit" name="btn_hochschullogin" value="Zum Hochschul-Login" role="button" />
-                                <label id="NEStates_label" for="NEStates">New England States:</label>
                             </fieldset>
                         </form>
                         <h5><abbr title="Häufig gestellte Fragen">FAQs</abbr> zum <span lang="en" xml:lang="en">Login</span>:</h5>
                         <ul role="list">
-                            <li role="listitem"><a href="#" title="">Allgemeines zum Login</a></li>
-                            <li role="listitem"><a href="#" title="">Warum funktioniert mein Login nicht?</a></li>
-                            <li role="listitem"><a href="#" title="">Sichere Verbindung fehlgeschlagen?</a></li>
-                            <li role="listitem"><a href="#" title="">Passwort vergessen?</a></li>
+                            <li role="listitem"><a href="#" title="Allgemeines zum Login">Allgemeines zum <span lang="en" xml:lang="en">Login</span></a></li>
+                            <li role="listitem"><a href="#" title="Warum fuktioniert mein Login nicht?">Warum funktioniert mein <span lang="en" xml:lang="en">Login</span> nicht?</a></li>
+                            <li role="listitem"><a href="#" title="Sichere Verbindung fehlgeschlagen?">Sichere Verbindung fehlgeschlagen?</a></li>
+                            <li role="listitem"><a href="#" title="Passwort vergessen?">Passwort vergessen?</a></li>
                         </ul>
                     </div>
-                    <div id="opal-login" role="tabpanel" aria-labelledby="opal-tab" aria-relevant="all">
+                    <div id="opal-login" class="panel" role="tabpanel" aria-labelledby="opal-tab" aria-relevant="all">
                         <h4 role="heading"><abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr>-<span lang="en" xml:lang="en">Login</span></h4>
                         <p>Bitte melden Sie sich mit Ihrem persönlichen <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr>-Benutzernamen und Passwort an.</p>
                         <form role="form" action="">
@@ -118,13 +117,13 @@
                             </fieldset>
                         </form>
                         <ul role="list">
-                            <li role="listitem"><a href="#" title="">Passwort vergessen?</a></li>
-                            <li role="listitem"><a href="#" title="">Gastzugang</a></li>
+                            <li role="listitem"><a href="#" title="Passwort vergessen?">Passwort vergessen?</a></li>
+                            <li role="listitem"><a href="#" title="zum Gastzugang">Gastzugang</a></li>
                         </ul>
                     </div> 
                 </div>
             </div>
-			<script type="text/javascript" src="js/logintabs.js"></script>  <!-- Skript für die Tabsteuerung -->        
+			<script type="text/javascript" src="js/logintabs.js"></script>  <!-- Skript für die Tabsteuerung -->    
         </div>
         
         <!-- Aktuelles -->
@@ -140,13 +139,13 @@
     <div id="footer">
     	<ul role="contentinfo">
         	<li role="presentation"><a href="#" title="Nutzungsbedingungen" accesskey="8">Nutzungsbedingungen</a></li>
-            <li role="presentation"><a href="#" title="">Datenschutz</a></li>
-            <li role="presentation"><a href="#" title="">Impressum</a></li>
-            <li role="presentation"><a href="#" title=""><span lang="en" xml:lang="en">powered by</span> <abbr title="Bildungsportal Sachsen">BPS</abbr> <abbr title="Gesellschaft mit beschränkter Haftung">GmbH</abbr></a></li>
+            <li role="presentation"><a href="#" title="Datenschutz">Datenschutz</a></li>
+            <li role="presentation"><a href="#" title="Impressum">Impressum</a></li>
+            <li role="presentation"><a href="#" title="Bildungsportal Sachsen"><span lang="en" xml:lang="en">powered by</span> <abbr title="Bildungsportal Sachsen">BPS</abbr> <abbr title="Gesellschaft mit beschränkter Haftung">GmbH</abbr></a></li>
         </ul>
     </div>
 </body>
-<!--<script type="text/javascript">
-	dojo.require("dijit.form.ComboBox");
-</script>-->
+<script type="text/javascript">
+	dojo.require("dijit.form.FilteringSelect");
+</script>
 </html>
