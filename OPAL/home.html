@@ -33,11 +33,19 @@
         </div>
         
         <!-- Tab-Reiter -->
-        <ul role="navigation">
-        	<li role="presentation"><a href="#" title="Meine Einstiegsseite" role="link">Start</a></li>
+        <ul class="headtabs" role="navigation">
+        	<li role="presentation"><a href="#" title="Meine Einstiegsseite" role="link"  accesskey="1">Start</a></li>
             <li role="presentation"><a href="#" title="Meine Lern- und Arbeitsgruppen" role="link">Meine Gruppen</a></li>
             <li role="presentation"><a href="#" title="Lernressourcen" role="link">Lernressourcen</a></li>
-            <li role="presentation"><a href="#" title="Hilfe" role="link">Hilfe</a></li>
+            <li role="presentation"><a href="#" title="Hilfe" role="link"  accesskey="6">Hilfe</a></li>
+        </ul>
+        
+        <!-- Ausloggen, Feed, Druck -->
+        <ul class="headlinks">
+        	<li role="presentation"><a lang="en" xml:lang="en" href="#" title="Really Simple Syndication Feed" role="link"><img src="img/feed.png" alt="RSS Icon" /> <abbr title="Really Simple Syndication ">RSS</abbr></a></li>
+            <li role="presentation"><a href="#" title="RSS-Hilfe" role="link"><img src="img/help.png" alt="Hilfe Icon" /> <abbr lang="en" xml:lang="en" title="Really Simple Syndication ">RSS</abbr>-Hilfe</a></li>
+            <li role="presentation"><a href="#" title="Drucken" role="link"><img src="img/print.png" alt="Drucken Icon" /> Drucken</a></li>
+            <li role="presentation"><a href="#" title="Hilfe" role="link"><img src="img/logout.png" alt="Ausloggen Icon" /> Ausloggen</a></li>
         </ul>
     </div>
     
@@ -56,6 +64,16 @@
             <li role="presentation"><a href="#" title="Dateien in meinem persönlichen Ordner verwalten" role="link">Persönlicher Ordner</a></li>
             <li role="presentation"><a href="#" title="Meine Leistungsnachweise verwalten" role="link">Leistungsnachweise</a></li>
         </ul>
+        
+        <!-- Suche -->
+        <h2 class="offscreen">Suche</h2>
+        <form  method="" name="search" action="" role="search">
+        	<fieldset>
+            	<label for="searchstring" class="offscreen">Suche:</label>
+                <input type="text" name="searchstring" role="textbox"  accesskey="4" />
+                <input type="image" name="btn_search" src="img/search.gif" value="Suchen" role="button" />
+            </fieldset>
+        </form>
     </div>
     
     <!-- Inhalt -->
@@ -66,7 +84,7 @@
         <div class="column">
         	<h3 role="heading">Meine Hochschule</h3>
             <p><img src="img/tud.gif" alt="Logo Technische Universität Dresden" /></p>
-            <p><a href="" title="Lehr- und Lernangebote der Technischen Universität Dresden" role="link">Lehr- und Lernangebote der <abbr title="Technische Universität">TU</abbr> Dresden</a></p>
+            <p><a href="" title="Lehr- und Lernangebote der Technischen Universität Dresden" role="link"><img src="img/folder.gif" alt="" /> Lehr- und Lernangebote der <abbr title="Technische Universität">TU</abbr> Dresden</a></p>
           <p>Sie benötigen Unterstützung oder Autorenrechte für Ihre Arbeit mit <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr>? Klicken Sie bitte auf den nachfolgenden Link.</p>
             <p><strong>Ihre Ansprechpartner:</strong> Christian Meier, Dr. Helmut Flitter, Lars Schlenker, Thomas Meschzan</p>
             <p><strong>Telefon:</strong> (0351) 463-34942</p>

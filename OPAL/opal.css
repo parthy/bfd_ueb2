@@ -25,6 +25,7 @@ div#header {
 	background-image:url('img/geometry.gif');
 	background-repeat:no-repeat;
 	background-position:100px 0px;
+	height:5em;
 }
 
 div#sidebar {
@@ -33,6 +34,7 @@ div#sidebar {
 	width:14.5%;
 	border-right:0.1em dotted rgb(221, 221, 221);
 	/*border-bottom:0.1em dotted rgb(221, 221, 221);*/
+	clear:both;
 	margin-top:1.5em;
 	margin-left:1%;
 	-moz-border-radius:0 0 0.5em 0;
@@ -90,7 +92,12 @@ option[value="de"] {
 	background-image:url(img/de.png);	
 }
 
-div#header ul {
+div#header ul li a {
+	float:none;
+}
+
+div#header ul.headtabs {
+	float:left;
 	clear:both;
 	display:block;
 	list-style-type:none;
@@ -98,13 +105,23 @@ div#header ul {
 	font-size:1em;
 }
 
-div#header ul li {
+div#header ul.headtabs li {
 	display:inline;
 	margin-right:1em;
 }
 
-div#header ul li a {
-	float:none;
+div#header ul.headlinks {
+	float:right;
+	display:block;
+	margin:1em;
+	clear:right;
+	width:48%;
+	text-align:right;
+}
+
+div#header ul.headlinks li {
+	display:inline;
+	margin-left:1em;
 }
 
 /* Sidebar */
@@ -118,27 +135,44 @@ div#sidebar ul {
 #sidebar ul li {
 	height:1.5em;
 	width:10.5em;
-	border-bottom:1px solid #a0a0a0;
+	border-bottom:1px solid rgb(204, 204, 204);
 	margin-left:1em;
 	background-color:#fff;
 	padding-left:0.5em;
 }
 
 #sidebar ul li:hover {
-	background-color:#e5e5e5;
+	background-color:rgb(232, 232, 232);
+	color:rgb(34,59,111);
 }
 
 #sidebar ul li:first-child {
-	border-top:1px solid #a0a0a0;
+	border-top:1px solid rgb(204, 204, 204);
 	margin-left:0;
 	width:11.5em;
-	background-color:#e5e5e5;
+	background-color:rgb(232, 232, 232);
+	color:rgb(34,59,111);
 }
 
 #sidebar ul li a {
-	color:rgb(45, 81, 161);
+	color:rgb(34,59,111);
 	text-decoration:none;
 	line-height:1.5em;
+}
+
+#sidebar input {
+	float:left;
+}
+
+input[type="image"] {
+	background-color:rgb(240, 240, 240);
+	border-radius:0.5em;
+	-moz-border-radius:0.5em;
+	-webkit-border-radius:0.5em;
+	padding:0.3em;
+	color:rgb(0, 82, 77);
+	margin:0 0 0 0.5em;
+	width:auto;
 }
 
 /* Main */
@@ -194,6 +228,11 @@ p {
 	font-weight: normal;
 	line-height: 140%;
 	margin: 0 0 1em 0;
+}
+
+a img {
+	vertical-align:middle;
+	text-decoration:none;
 }
 
 div#content a:link {
