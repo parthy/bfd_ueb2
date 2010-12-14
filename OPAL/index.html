@@ -2,72 +2,75 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="claro.css" /> <!-- CSS für FilteringSelect-Widget aus dem dojo-Toolkit -->
+    <link rel="stylesheet" type="text/css" href="claro.css" /> <!-- CSS f&uuml;r FilteringSelect-Widget aus dem dojo-Toolkit -->
     <link rel="stylesheet" type="text/css" href="opal.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js" type="text/javascript" djConfig="parseOnLoad: true"></script> <!-- dojo-Toolkit -->
-    <title>OPAL - Online-Plattform für Akademisches Lehren und Lernen - Login</title>
+    <title>OPAL - Online-Plattform f&uuml;r Akademisches Lehren und Lernen - Login</title>
+    <script type="text/javascript">
+         dojo.require("dojo.parser");
+    </script>
 </head>
 <body role="document">
-	
+
     <!-- Kopfbereich -->
-    
+
     <div id="header" role="banner">
-    	<h1 class="offscreen">OPAL - Online-Plattform für Akademisches Lehren und Lernen</h1>
-        
-        <!-- Sprungmarken für Navigation und Hauptinhalt (Für Screenreader-Nutzer) -->        
+            <h1 class="offscreen">OPAL - Online-Plattform f&uuml;r Akademisches Lehren und Lernen</h1>
+
+        <!-- Sprungmarken f&uuml;r Navigation und Hauptinhalt (F&uuml;r Screenreader-Nutzer) -->
         <p class="offscreen">Springe zu: <a href="#content" accesskey="s" title="Springe direkt zum Hauptinhalt" tabindex="1" role="link">Hauptinhalt</a> | <a href="#navigation" accesskey="m" title="Springe direkt zur Navigation" tabindex="2" role="link">Navigation</a> | <a href="#login" accesskey="l" title="Springe direkt zum Login" role="link" tabindex="3"><span lang="en" xml:lang="en">Login</span></a></p>
         <a href="index.html" title="zur Startseite" role="link" tabindex="3"><img src="img/OPAL-2-5.png" alt="Logo OPAL" /></a>
-        
+
         <!-- Sprachauswahl -->
         <div class="language">
-        	<form  method="" name="languagechoose" action="" role="form">
-            	<label for="langchoose">Sprachauswahl:</label>
+                <form  method="" name="languagechoose" action="" role="form">
+                    <label for="langchoose">Sprachauswahl:</label>
                 <select id="langchoose" name="langchoose" role="select" accesskey="c">
-                	<option value="de" selected="selected" role="option" aria-selected="true">Deutsch</option>
+                        <option value="de" selected="selected" role="option" aria-selected="true">Deutsch</option>
                     <option value="en" role="option" aria-selected="false">English</option>
                 </select>
             </form>
         </div>
     </div>
-    
+
     <!-- Navigation -->
-    
+
     <div id="sidebar">
-    	<a name="navigation"></a>
+            <a name="navigation"></a>
         <h2 class="offscreen">Navigation</h2>
-    	<ul role="navigation">
-        	<li role="presentation"><a href="index.html" title="Startseite" role="link" accesskey="1"><abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></a></li>
+            <ul role="navigation">
+                <li role="presentation"><a href="index.html" title="Startseite" role="link" accesskey="1"><abbr title="Online-Plattform f&uuml;r Akademisches Lehren und Lernen">OPAL</abbr></a></li>
             <li role="presentation"><a href="#" title="Barrierefreiheit" role="link" accesskey="0">Barrierefreiheit</a></li>
-            <li role="presentation"><a href="#" title="Über Cookies" role="link">Über <span lang="en" xml:lang="en">Cookies</span></a></li>
-            <li role="presentation"><a href="#" title="Allgemeine Informationen zu OPAL" role="link">Über <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></a></li>
+            <li role="presentation"><a href="#" title="&Uuml;ber Cookies" role="link">&Uuml;ber <span lang="en" xml:lang="en">Cookies</span></a></li>
+            <li role="presentation"><a href="#" title="Allgemeine Informationen zu OPAL" role="link">&Uuml;ber <abbr title="Online-Plattform f&uuml;r Akademisches Lehren und Lernen">OPAL</abbr></a></li>
         </ul>
     </div>
-    
+
     <!-- Inhalt -->
-    
+
     <a name="content"></a>
     <div id="content" role="main">
-    	<h2 role="heading">Willkommen bei <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr></h2>
-        <p><abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr> bietet Dozenten und Studenten viele Werkzeuge an, welche die Hochschulausbildung und -forschung bereichern und die alltägliche Arbeit erleichtern.</p>
-		<p>Sie werden sehen: Lehren und Lernen im <span lang="en" xml:lang="en">Web</span> macht Spaß und ist zudem einfacher, als Sie denken!</p>        
-        
-        <!-- Login-Möglichkeiten -->
+            <h2 role="heading">Willkommen bei <abbr title="Online-Plattform f&uuml;r Akademisches Lehren und Lernen">OPAL</abbr></h2>
+        <p><abbr title="Online-Plattform f&uuml;r Akademisches Lehren und Lernen">OPAL</abbr> bietet Dozenten und Studenten viele Werkzeuge an, welche die Hochschulausbildung und -forschung bereichern und die allt&auml;gliche Arbeit erleichtern.</p>
+                <p>Sie werden sehen: Lehren und Lernen im <span lang="en" xml:lang="en">Web</span> macht Spa&szlig; und ist zudem einfacher, als Sie denken!</p>
+
+        <!-- Login-M&ouml;glichkeiten -->
         <a name="login"></a>
         <div class="login">
-        	<h3 role="heading" lang="en" xml:lang="en">Login</h3>
-        	<div id="login">
-            
-            	<!-- Tabreiter -->
-                <ul class="tabs jshidden" role="tablist"> 
+                <h3 role="heading" lang="en" xml:lang="en">Login</h3>
+                <div id="login">
+
+                    <!-- Tabreiter -->
+                <ul class="tabs jshidden" role="tablist">
                     <li id="hochschul-tab" aria-controls="hochschul-login" class="selected" role="tab" title="Hochschul-Login">Hochschul-Login</li>
                     <li id="opal-tab" aria-controls="opal-login" role="tab" title="OPAL-Login">OPAL-Login</li>
-                </ul>  
-                
-                <!-- Tabpanels -->         
-                <div class="panels" aria-live="assertive"> 
+                </ul>
+
+                <!-- Tabpanels -->
+                <div class="panels" aria-live="assertive">
                     <div id="hochschul-login" class="dijit_a11y panel" role="tabpanel" aria-labelledby="hochschul-tab" aria-relevant="all">
                         <h4 role="heading">Hochschul-<span lang="en" xml:lang="en">Login</span></h4>
                         <p>Bitte melden Sie sich einfach mit dem gewohnten Login aus Ihrem Hochschul-Rechenzentrum an.</p>
@@ -75,12 +78,12 @@
                         <form role="form" action="">
                             <fieldset>
                                 <label id="hochschul-label" for="hochschule">Meine Hochschule</label>
-                                <select name="hochschule" role="combobox" dojoType="dijit.form.FilteringSelect" id="select_hochschule">
-                                    <option value="foo" selected="selected">Bitte wählen Sie Ihre Hochschule...</option>
+                                <select name="hochschule" role="combobox" dojoType="dijit.form.FilteringSelect">
+                                    <option value="foo" selected="selected">Bitte w&auml;hlen Sie Ihre Hochschule...</option>
                                     <option value="https://shib02.hmt-leipzig.de/shibboleth-idp" >HMT Leipzig</option>
-                                    <option value="https://radius.hfmdd.de/shibboleth" >HS für Musik Dresden</option>
+                                    <option value="https://radius.hfmdd.de/shibboleth" >HS f&uuml;r Musik Dresden</option>
                                     <option value="https://login2.hs-mittweida.de/idp/shibboleth" >HS Mittweida</option>
-                                    <option value="https://idp.hs-zigr.de/shibboleth" >HS Zittau / Görlitz</option>
+                                    <option value="https://idp.hs-zigr.de/shibboleth" >HS Zittau / G&ouml;rlitz</option>
                                     <option value="https://idp.htw-dresden.de/shibboleth" >HTW Dresden</option>
                                     <option value="https://idp.htwk-leipzig.de/shibboleth" >HTWK Leipzig</option>
                                     <option value="https://idp.hs-zigr.de/shibboleth-ihi" >IHI Zittau</option>
@@ -89,14 +92,14 @@
                                     <option value="urn:mace:tu-chemnitz.de:wtc">TU Chemnitz</option>
                                     <option value="https://idp.tu-dresden.de/shibboleth">TU Dresden</option>
                                     <option value="https://shibb.rz.uni-leipzig.de/shibboleth" >Uni Leipzig</option>
-                                    <option value="https://idp.fh-zwickau.de/shibboleth" >Westsächsische Hochschule Zwickau</option>
+                                    <option value="https://idp.fh-zwickau.de/shibboleth" >Wests&auml;chsische Hochschule Zwickau</option>
                                     <option value="https://www.bps-system.de/shibboleth-idp/" >VHO der BPS Bildungsportal Sachsen GmbH</option>
                                     <option value="https://vpn.bps-system.de/shibboleth-idp/" >Intern - BPS Bildungsportal Sachsen GmbH</option>
                                 </select>
                                 <input type="submit" name="btn_hochschullogin" value="Zum Hochschul-Login" role="button" />
                             </fieldset>
                         </form>
-                        <h5><abbr title="Häufig gestellte Fragen">FAQs</abbr> zum <span lang="en" xml:lang="en">Login</span>:</h5>
+                        <h5><abbr title="H&auml;ufig gestellte Fragen">FAQs</abbr> zum <span lang="en" xml:lang="en">Login</span>:</h5>
                         <ul role="list">
                             <li role="listitem"><a href="#" title="Allgemeines zum Login">Allgemeines zum <span lang="en" xml:lang="en">Login</span></a></li>
                             <li role="listitem"><a href="#" title="Warum fuktioniert mein Login nicht?">Warum funktioniert mein <span lang="en" xml:lang="en">Login</span> nicht?</a></li>
@@ -105,8 +108,8 @@
                         </ul>
                     </div>
                     <div id="opal-login" class="panel" role="tabpanel" aria-labelledby="opal-tab" aria-relevant="all">
-                        <h4 role="heading"><abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr>-<span lang="en" xml:lang="en">Login</span></h4>
-                        <p>Bitte melden Sie sich mit Ihrem persönlichen <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr>-Benutzernamen und Passwort an.</p>
+                        <h4 role="heading"><abbr title="Online-Plattform f&uuml;r Akademisches Lehren und Lernen">OPAL</abbr>-<span lang="en" xml:lang="en">Login</span></h4>
+                        <p>Bitte melden Sie sich mit Ihrem pers&ouml;nlichen <abbr title="Online-Plattform f&uuml;r Akademisches Lehren und Lernen">OPAL</abbr>-Benutzernamen und Passwort an.</p>
                         <form role="form" action="">
                             <fieldset>
                                 <label for="username">Benutzername:</label>
@@ -120,32 +123,32 @@
                             <li role="listitem"><a href="#" title="Passwort vergessen?">Passwort vergessen?</a></li>
                             <li role="listitem"><a href="#" title="zum Gastzugang">Gastzugang</a></li>
                         </ul>
-                    </div> 
+                    </div>
                 </div>
             </div>
-			<script type="text/javascript" src="js/logintabs.js"></script>  <!-- Skript für die Tabsteuerung -->    
+                        <script type="text/javascript" src="js/logintabs.js"></script>  <!-- Skript f&uuml;r die Tabsteuerung -->
         </div>
-        
+
         <!-- Aktuelles -->
         <div class="news">
-        	<h3 role="heading">Aktuelles</h3>
-            <p>Viele Hinweise, Neuigkeiten und interessante Hintergrundinformationen zur Lernplattform <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr> finden Sie im <a href="#" lang="en" xml:lang="en" title="Weblog">Weblog</a>.</p>
+                <h3 role="heading">Aktuelles</h3>
+            <p>Viele Hinweise, Neuigkeiten und interessante Hintergrundinformationen zur Lernplattform <abbr title="Online-Plattform f&uuml;r Akademisches Lehren und Lernen">OPAL</abbr> finden Sie im <a href="#" lang="en" xml:lang="en" title="Weblog">Weblog</a>.</p>
         </div>
     </div>
-    <div id="clearer"></div> <!-- sorgt dafür, dass Inhalt nicht hinter dem fixen Footer verborgen wird -->
-    
-    <!-- Fußzeile -->
-    
+    <div id="clearer"></div> <!-- sorgt daf&uuml;r, dass Inhalt nicht hinter dem fixen Footer verborgen wird -->
+
+    <!-- Fu&szlig;zeile -->
+
     <div id="footer">
-    	<ul role="contentinfo">
-        	<li role="presentation"><a href="#" title="Nutzungsbedingungen" accesskey="8">Nutzungsbedingungen</a></li>
+            <ul role="contentinfo">
+                <li role="presentation"><a href="#" title="Nutzungsbedingungen" accesskey="8">Nutzungsbedingungen</a></li>
             <li role="presentation"><a href="#" title="Datenschutz">Datenschutz</a></li>
             <li role="presentation"><a href="#" title="Impressum">Impressum</a></li>
-            <li role="presentation"><a href="#" title="Bildungsportal Sachsen"><span lang="en" xml:lang="en">powered by</span> <abbr title="Bildungsportal Sachsen">BPS</abbr> <abbr title="Gesellschaft mit beschränkter Haftung">GmbH</abbr></a></li>
+            <li role="presentation"><a href="#" title="Bildungsportal Sachsen"><span lang="en" xml:lang="en">powered by</span> <abbr title="Bildungsportal Sachsen">BPS</abbr> <abbr title="Gesellschaft mit beschr&auml;nkter Haftung">GmbH</abbr></a></li>
         </ul>
     </div>
 </body>
 <script type="text/javascript">
-	dojo.require("dijit.form.FilteringSelect");
+        dojo.require("dijit.form.FilteringSelect");
 </script>
 </html>
