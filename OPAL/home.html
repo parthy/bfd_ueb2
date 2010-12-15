@@ -2,12 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="claro.css" /> <!-- CSS für FilteringSelect-Widget aus dem dojo-Toolkit -->
     <link rel="stylesheet" type="text/css" href="opal.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js" type="text/javascript" djConfig="parseOnLoad: true"></script> <!-- dojo-Toolkit -->
     <title>OPAL - Online-Plattform für Akademisches Lehren und Lernen - Login</title>
 </head>
 <body role="document">
@@ -17,9 +13,9 @@
     <div id="header" role="banner">
     	<h1 class="offscreen">OPAL - Online-Plattform für Akademisches Lehren und Lernen</h1>
         
-        <!-- Sprungmaken für Navigation und Hauptinhalt (Für Screenreader-Nutzer) -->        
+        <!-- Sprungmaken fuer Navigation und Hauptinhalt (Fuer Screenreader-Nutzer) -->        
         <p class="offscreen">Springe zu: <a href="#content" accesskey="s" title="Springe direkt zum Hauptinhalt" tabindex="1" role="link">Hauptinhalt</a> | <a href="#navigation" accesskey="m" title="Springe direkt zur Navigation" tabindex="2" role="link">Navigation</a> | <a href="#login" accesskey="l" title="Springe direkt zum Login" role="link" tabindex="3"><span lang="en" xml:lang="en">Login</span></a></p>
-        <a href="index.html" title="zur Startseite" role="link" tabindex="3"><img src="img/OPAL-2-5.png" alt="Logo OPAL" /></a>
+        <a href="home.html.html" title="zur Startseite" role="link" tabindex="3"><img src="img/OPAL-2-5.png" alt="Logo OPAL" /></a>
         
         <!-- Sprachauswahl -->
         <div class="language">
@@ -27,25 +23,25 @@
             	<label for="langchoose">Sprachauswahl:</label>
                 <select id="langchoose" name="langchoose" role="select" accesskey="c">
                 	<option value="de" selected="selected" role="option" aria-selected="true">Deutsch</option>
-                    <option value="en" role="option" aria-selected="false">English</option>
+                    <option lang="en" xml:lang="en" value="en" role="option" aria-selected="false">English</option>
                 </select>
             </form>
         </div>
         
         <!-- Tab-Reiter -->
         <ul class="headtabs" role="navigation">
-        	<li role="presentation"><a href="#" title="Meine Einstiegsseite" role="link"  accesskey="1">Start</a></li>
-            <li role="presentation"><a href="#" title="Meine Lern- und Arbeitsgruppen" role="link">Meine Gruppen</a></li>
-            <li role="presentation"><a href="#" title="Lernressourcen" role="link">Lernressourcen</a></li>
-            <li role="presentation"><a href="#" title="Hilfe" role="link"  accesskey="6">Hilfe</a></li>
+        	<li role="presentation"><a href="home.html" title="Meine Einstiegsseite" role="link"  accesskey="1">Start</a></li>
+            <li role="presentation"><a href="dummy.html" title="Meine Lern- und Arbeitsgruppen" role="link">Meine Gruppen</a></li>
+            <li role="presentation"><a href="dummy.html" title="Lernressourcen" role="link">Lernressourcen</a></li>
+            <li role="presentation"><a href="dummy.html" title="Hilfe" role="link"  accesskey="6">Hilfe</a></li>
         </ul>
         
         <!-- Ausloggen, Feed, Druck -->
         <ul class="headlinks">
-        	<li role="presentation"><a lang="en" xml:lang="en" href="#" title="Really Simple Syndication Feed" role="link"><img src="img/feed.png" alt="RSS Icon" /> <abbr title="Really Simple Syndication ">RSS</abbr></a></li>
-            <li role="presentation"><a href="#" title="RSS-Hilfe" role="link"><img src="img/help.png" alt="Hilfe Icon" /> <abbr lang="en" xml:lang="en" title="Really Simple Syndication ">RSS</abbr>-Hilfe</a></li>
-            <li role="presentation"><a href="#" title="Drucken" role="link"><img src="img/print.png" alt="Drucken Icon" /> Drucken</a></li>
-            <li role="presentation"><a href="#" title="Hilfe" role="link"><img src="img/logout.png" alt="Ausloggen Icon" /> Ausloggen</a></li>
+        	<li role="presentation"><a lang="en" xml:lang="en" href="dummy.html" title="Really Simple Syndication Feed" role="link" tabindex="0"><img src="img/feed.png" alt="RSS Icon" /> <abbr title="Really Simple Syndication ">RSS</abbr></a></li>
+            <li role="presentation"><a href="dummy.html" title="RSS-Hilfe" role="link" tabindex="0"><img src="img/help.png" alt="Hilfe Icon" /> <abbr lang="en" xml:lang="en" title="Really Simple Syndication ">RSS</abbr>-Hilfe</a></li>
+            <li role="presentation"><a href="dummy.html" title="Drucken" role="link" tabindex="0"><img src="img/print.png" alt="Drucken Icon" /> Drucken</a></li>
+            <li role="presentation"><a href="index.html" title="Hilfe" role="link" tabindex="0"><img src="img/logout.png" alt="Ausloggen Icon" /> Ausloggen</a></li>
         </ul>
     </div>
     
@@ -55,20 +51,21 @@
     	<a name="navigation"></a>
         <h2 class="offscreen">Navigation</h2>
     	<ul role="navigation">
-        	<li role="presentation"><a href="#" title="Meine Einstiegsseite" role="link">Start</a></li>
-            <li role="presentation"><a href="#" title="Meine Einstellungen" role="link">Einstellungen</a></li>
-            <li role="presentation"><a href="#" title="Mein persönlicher Kalender" role="link">Kalender</a></li>
-            <li role="presentation"><a href="#" title="Meine Benachrichtigungen verwalten" role="link">Benachrichtigungen</a></li>
-            <li role="presentation"><a href="#" title="Meine Abonnements verwalten" role="link">Abonnements</a></li>
-            <li role="presentation"><a href="#" title="Meine Lesezeichen starten und editieren" role="link">Lesezeichen</a></li>
-            <li role="presentation"><a href="#" title="Dateien in meinem persönlichen Ordner verwalten" role="link">Persönlicher Ordner</a></li>
-            <li role="presentation"><a href="#" title="Meine Leistungsnachweise verwalten" role="link">Leistungsnachweise</a></li>
+        	<li role="presentation" class="selected"><a href="home.html" title="Meine Einstiegsseite" role="link" tabindex="0">Start</a></li>
+            <li role="presentation"><a href="dummy.html" title="Meine Einstellungen" role="link" tabindex="0">Einstellungen</a></li>
+            <li role="presentation"><a href="dummy.html" title="Mein pers&ouml;nlicher Kalender" role="link" tabindex="0">Kalender</a></li>
+            <li role="presentation"><a href="dummy.html" title="Meine Benachrichtigungen verwalten" role="link" tabindex="0">Benachrichtigungen</a></li>
+            <li role="presentation"><a href="dummy.html" title="Meine Abonnements verwalten" role="link" tabindex="0">Abonnements</a></li>
+            <li role="presentation"><a href="dummy.html" title="Meine Lesezeichen starten und editieren" role="link" tabindex="0">Lesezeichen</a></li>
+            <li role="presentation"><a href="dummy.html" title="Dateien in meinem pers&ouml;nlichen Ordner verwalten" role="link" tabindex="0">Pers&ouml;nlicher Ordner</a></li>
+            <li role="presentation"><a href="dummy.html" title="Meine Leistungsnachweise verwalten" role="link" tabindex="0">Leistungsnachweise</a></li>
         </ul>
         
         <!-- Suche -->
         <h2 class="offscreen">Suche</h2>
         <form  method="" name="search" action="" role="search">
         	<fieldset>
+            	<legend class="offscreen">Suche</legend>
             	<label for="searchstring" class="offscreen">Suche:</label>
                 <input type="text" name="searchstring" role="textbox"  accesskey="4" />
                 <input type="image" name="btn_search" src="img/search.gif" value="Suchen" role="button" />
@@ -97,8 +94,8 @@
             <table summary="Diese Tabelle enth&auml;lt die Schnellstart-Links und die dazugehörigen Beschreibungen" rules="all">
                  <caption>Schnellstart-Links</caption>
                  <colgroup>
-                         <col width="100" />
-                         <col width="300" />
+                         <col width="30%" />
+                         <col width="70%" />
                  </colgroup>
                  <thead>
                  	<tr class="offscreen">
@@ -108,23 +105,23 @@
                  </thead>
                  <tbody>
                      <tr>
-                         <td headers="link"><a href="" title="Alle Kurse und Lernangebote anzeigen" role="link">Kurse</a></td>
+                         <td headers="link"><a href="dummy.html" title="Alle Kurse und Lernangebote anzeigen" role="link">Kurse</a></td>
                          <td headers="desc">Alle Kurse und Lernangebote anzeigen</td>
                      </tr>
                      <tr>
-                         <td headers="link"><a href="" title="Stöbern Sie nach Kursen im Katalog" role="link">Katalog</a></td>
+                         <td headers="link"><a href="dummy.html" title="Stöbern Sie nach Kursen im Katalog" role="link">Katalog</a></td>
                          <td headers="desc">Stöbern Sie nach Kursen im Katalog</td>
                      </tr>
                      <tr>
-                         <td headers="link"><a href="" title="Lernen Sie OPAL kennen" role="link">Hilfe</a></td>
+                         <td headers="link"><a href="dummy.html" title="Lernen Sie OPAL kennen" role="link">Hilfe</a></td>
                          <td headers="desc">Lernen Sie <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr> kennen</td>
                      </tr>
                      <tr>
-                         <td headers="link"><a href="" title="Passen Sie OPAL an Ihre Bedürfnisse an" role="link">Einstellungen</a></td>
-                         <td headers="desc">Passen Sie <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr> an Ihre Bedürfnisse an</td>
+                         <td headers="link"><a href="dummy.html" title="Passen Sie OPAL an Ihre Bedürfnisse an" role="link">Einstellungen</a></td>
+                         <td headers="desc">Passen Sie <abbr title="Online-Plattform für Akademisches Lehren und Lernen">OPAL</abbr> an Ihre Bed&uuml;rfnisse an</td>
                      </tr>
                      <tr>
-                         <td headers="link"><a href="" title="Erstellen Sie eigene Arbeitsgruppen zum Beispiel für den Dateiaustausch" role="link">Arbeitsgruppen</a></td>
+                         <td headers="link"><a href="dummy.html" title="Erstellen Sie eigene Arbeitsgruppen zum Beispiel für den Dateiaustausch" role="link">Arbeitsgruppen</a></td>
                          <td headers="desc">Erstellen Sie eigene Arbeitsgruppen <abbr title="zum Beispiel">z.B.</abbr> für den Dateiaustausch</td>
                      </tr>
              </tbody>
@@ -132,27 +129,27 @@
             
             <h3 role="heading">Meine Lesezeichen</h3>
             <ul>
-            	<li><a href="#" title="Lesezeichen 1" role="link">Lesezeichen 1</a></li>
-                <li><a href="#" title="Lesezeichen 2" role="link">Lesezeichen 2</a></li>
-                <li><a href="#" title="Lesezeichen 3" role="link">Lesezeichen 3</a></li>
+            	<li><a href="dummy.html" title="Lesezeichen 1" role="link">Lesezeichen 1</a></li>
+                <li><a href="dummy.html" title="Lesezeichen 2" role="link">Lesezeichen 2</a></li>
+                <li><a href="dummy.html" title="Lesezeichen 3" role="link">Lesezeichen 3</a></li>
             </ul>
-            <p class="more-link"><a href="#" title="Alle Lesezeichen anzeigen" role="link">Alle Lesezeichen anzeigen</a></p>
+            <p class="more-link"><a href="dummy.html" title="Alle Lesezeichen anzeigen" role="link">Alle Lesezeichen anzeigen</a></p>
             
             <h3 role="heading">Meine Benachrichtigungen</h3>
             <p>Sie haben keine aktuellen Benachrichtigungen.</p>
-            <p class="more-link"><a href="#" title="Alle Benachrichtigungen anzeigen" role="link">Alle Benachrichtigungen anzeigen</a></p>
+            <p class="more-link"><a href="dummy.html" title="Alle Benachrichtigungen anzeigen" role="link">Alle Benachrichtigungen anzeigen</a></p>
         </div>        
     </div>
-    <div id="clearer"></div> <!-- sorgt dafür, dass Inhalt nicht hinter dem fixen Footer verborgen wird -->
+    <div id="clearer"></div> <!-- sorgt dafuer, dass Inhalt nicht hinter dem fixen Footer verborgen wird -->
     
     <!-- Fußzeile -->
     
     <div id="footer">
     	<ul role="contentinfo">
-        	<li role="presentation"><a href="#" title="Nutzungsbedingungen" accesskey="8">Nutzungsbedingungen</a></li>
-            <li role="presentation"><a href="#" title="Datenschutz">Datenschutz</a></li>
-            <li role="presentation"><a href="#" title="Impressum">Impressum</a></li>
-            <li role="presentation"><a href="#" title="Bildungsportal Sachsen"><span lang="en" xml:lang="en">powered by</span> <abbr title="Bildungsportal Sachsen">BPS</abbr> <abbr title="Gesellschaft mit beschränkter Haftung">GmbH</abbr></a></li>
+        	<li role="presentation"><a href="dummy.html" title="Nutzungsbedingungen" accesskey="8" tabindex="0">Nutzungsbedingungen</a></li>
+            <li role="presentation"><a href="dummy.html" title="Datenschutz" tabindex="0">Datenschutz</a></li>
+            <li role="presentation"><a href="dummy.html" title="Impressum" tabindex="0">Impressum</a></li>
+            <li role="presentation"><a href="dummy.html" title="Bildungsportal Sachsen" tabindex="0"><span lang="en" xml:lang="en">powered by</span> <abbr title="Bildungsportal Sachsen">BPS</abbr> <abbr title="Gesellschaft mit beschr&auml;nkter Haftung">GmbH</abbr></a></li>
         </ul>
     </div>
 </body>

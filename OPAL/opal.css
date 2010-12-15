@@ -134,7 +134,6 @@ div#sidebar ul {
 
 #sidebar ul li {
 	height:1.5em;
-	width:10.5em;
 	border-bottom:1px solid rgb(204, 204, 204);
 	margin-left:1em;
 	background-color:#fff;
@@ -149,7 +148,6 @@ div#sidebar ul {
 #sidebar ul li:first-child {
 	border-top:1px solid rgb(204, 204, 204);
 	margin-left:0;
-	width:11.5em;
 	background-color:rgb(232, 232, 232);
 	color:rgb(34,59,111);
 }
