@@ -27,11 +27,13 @@ public class BrowserMain {
 	static String[] urls;
 	static String[] titles;
 	static int index;	
+	static final Text location = new Text(shell, SWT.BORDER);
+	static final Composite compTools = new Composite(shell, SWT.NONE);
+	static final ToolBar navBar = new ToolBar(compTools, SWT.NONE);
 	static Composite comp = new Composite(shell, SWT.NONE);
 	static SashForm form = new SashForm(comp, SWT.HORIZONTAL);
 	static final List list = new List(form, SWT.SINGLE);
-	static final Composite compTools = new Composite(shell, SWT.NONE);
-	static final ToolBar navBar = new ToolBar(compTools, SWT.NONE);
+	
 	
 	static MouseCatcher catcher = new MouseCatcher();
 	
@@ -48,7 +50,15 @@ public class BrowserMain {
 		compTools.setLayoutData(data);
 		compTools.setLayout(new GridLayout(2, false));
 		
+		
+		data = new GridData();
+		data.horizontalAlignment = GridData.FILL;
+		data.horizontalSpan = 2;
+		data.grabExcessHorizontalSpace = true;
+		location.setLayoutData(data);
 		ToolBar tocBar = new ToolBar(compTools, SWT.NONE);
+		ToolItem goItem = new ToolItem(tocBar, SWT.PUSH);
+		goItem.setText("Go");
 		ToolItem openItem = new ToolItem(tocBar, SWT.PUSH);
 		openItem.setText("Browse");
 		
@@ -179,7 +189,33 @@ public class BrowserMain {
 			}
 		});
 		
+		Listener listener = new Listener() {
+			public void handleEvent(Event event) {
+				ToolItem item = (ToolItem)event.widget;
+				String string = item.getText();
+				if (string.equals("Go")) browser.setUrl(location.getText());
+		   }
+		};
+		goItem.addListener(SWT.Selection, listener);
+		location.addListener(SWT.DefaultSelection, new Listener() {
+			public void handleEvent(Event e) {
+				browser.setUrl(location.getText());
+			}
+		});
+
+		browser.addProgressListener(new ProgressListener() {
+			public void changed(ProgressEvent event) {
+				if (event.total == 0) return;                            
+				
+			}
+			public void completed(ProgressEvent event) {
+				location.setText(browser.getUrl());
+			}
+		});
+
+		
 		shell.open();
+		browser.setUrl("http://moodle.inf.tu-dresden.de/");
 		
 		while (!shell.isDisposed()) {
 			if (!display.readAndDispatch())

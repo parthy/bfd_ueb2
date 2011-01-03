@@ -55,8 +55,10 @@ public class MouseCatcher implements DollarListener, MouseListener, MouseMoveLis
 				BrowserMain.browser.refresh();
 			} else if(name.equals("leftSquareBracket")) {
 				BrowserMain.browser.back();
+				BrowserMain.location.setText(BrowserMain.browser.getUrl());
 			} else if(name.equals("rightSquareBracket")) {
 				BrowserMain.browser.forward();
+				BrowserMain.location.setText(BrowserMain.browser.getUrl());
 			} else if(name.equals("v")) {
 				openDialog();
 			} else {
